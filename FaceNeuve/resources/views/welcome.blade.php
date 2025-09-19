@@ -56,7 +56,12 @@
     <div class="container px-5">
         <div class="row gx-5 align-items-center">
             <div class="col-lg-8 mb-5 mb-lg-0 mx-auto">
+                <div class="text-center mb-5">
+                    <h2 class="section-heading text-uppercase">Ce que disent les étudiants</h2>
+                    <h3 class="section-subheading text-primary">Leurs impressions sur l’expérience FaceNeuve</h3>
+                </div>
                 <div class="container-fluid px-5">
+
                     <div class="row gx-5">
                         <div class="col-md-6 mb-5">
                             <!-- Feature item-->
@@ -99,6 +104,12 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="col-lg-12 mx-auto text-center mt-5">
+                    <p class="large text-muted">
+                        Les étudiants qui utilisent FaceNeuve partagent leurs avis sur la plateforme : simplicité, entraide et motivation.
+                        Découvrez leurs témoignages et voyez comment FaceNeuve transforme leur manière d’apprendre et de collaborer.
+                    </p>
                 </div>
             </div>
         </div>
