@@ -7,7 +7,10 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>New Age - Start Bootstrap Theme</title>
+    <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Google fonts-->
@@ -23,7 +26,7 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
         <div class="container px-5">
-            <a class="navbar-brand fw-bold" href="#page-top">Start Bootstrap</a>
+            <a class="navbar-brand" href="#page-top"><img src="assets/img/logo_faceneuve.png" width="60px" height="60px" alt="..." /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="bi-list"></i>
@@ -84,7 +87,9 @@
                                     <!-- * * Set the max width of your media to 100% and the height to-->
                                     <!-- * * 100% like the demo example below.-->
                                     <video muted="muted" autoplay="" loop="" style="max-width: 100%; height: 100%">
-                                        <source src="assets/img/demo-screen.mp4" type="video/mp4" />
+                                        <!-- reference video -->
+                                        <!-- https://www.pexels.com/pt-br/video/garoto-menino-rapaz-garotas-7971022/ -->
+                                        <source src="assets/img/video/eleves.mp4" type="video/mp4" />
                                     </video>
                                 </div>
                             </div>
@@ -102,7 +107,7 @@
                     <div class="h2 fs-1 text-white mb-4">
                         "ViseNeuve facilite la vie étudiante en centralisant l’information et en renforçant les liens entre les étudiants du Collège Maisonneuve."
                     </div>
-                    <img src="assets/img/maisonneuve-logo.png" alt="Collège Maisonneuve" style="height: 3rem" />
+                    <!-- <img src="assets/img/maisonneuve-logo.png" alt="Collège Maisonneuve" style="height: 3rem" /> -->
                 </div>
             </div>
         </div>
@@ -118,7 +123,8 @@
                             <div class="col-md-6 mb-5">
                                 <!-- Feature item-->
                                 <div class="text-center">
-                                    <i class="bi-chat-dots icon-feature text-gradient d-block mb-3"></i>
+                                    <img class="mx-auto rounded-circle" src="assets/img/team/2.jpg" height="150px" width="150px" alt="..." />
+                                    <!-- <i class="bi-chat-dots icon-feature text-gradient d-block mb-3"></i> -->
                                     <h3 class="font-alt">Camille R.</h3>
                                     <p class="text-muted mb-0">"FaceNeuve m’a permis de mieux organiser mes cours et de collaborer facilement avec mes camarades."</p>
                                 </div>
@@ -127,7 +133,8 @@
                             <div class="col-md-6 mb-5">
                                 <!-- Feature item-->
                                 <div class="text-center">
-                                    <i class="bi-person-circle icon-feature text-gradient d-block mb-3"></i>
+                                    <img class="mx-auto rounded-circle" src="assets/img/team/1.jpg" height="150px" width="150px" alt="..." />
+                                    <!-- <i class="bi-person-circle icon-feature text-gradient d-block mb-3"></i> -->
                                     <h3 class="font-alt">Julien M.</h3>
                                     <p class="text-muted mb-0">"J’aime l’interface simple et intuitive, ça rend l’apprentissage beaucoup plus agréable."</p>
                                 </div>
@@ -137,8 +144,9 @@
                             <div class="col-md-6 mb-5">
                                 <!-- Feature item-->
                                 <div class="text-center">
-                                    <i class="bi-lightbulb icon-feature text-gradient d-block mb-3"></i>
-                                    <h3 class="font-alt">Sofia L.</h3>
+                                    <img class="mx-auto rounded-circle" src="assets/img/team/danilo.jpg" height="150px" width="150px" alt="..." />
+                                    <!-- <i class="bi-lightbulb icon-feature text-gradient d-block mb-3"></i> -->
+                                    <h3 class="font-alt">Danilo L.</h3>
                                     <p class="text-muted mb-0">"Grâce à FaceNeuve, j’ai pu trouver de nouvelles méthodes d’étude et partager des idées innovantes."</p>
                                 </div>
                             </div>
@@ -146,7 +154,8 @@
                             <div class="col-md-6 mb-5">
                                 <!-- Feature item-->
                                 <div class="text-center">
-                                    <i class="bi-emoji-smile icon-feature text-gradient d-block mb-3"></i>
+                                    <img class="mx-auto rounded-circle" src="assets/img/team/3.jpg" height="150px" width="150px" alt="..." />
+                                    <!-- <i class="bi-emoji-smile icon-feature text-gradient d-block mb-3"></i> -->
                                     <h3 class="font-alt">David P.</h3>
                                     <p class="text-muted mb-0">"Une vraie communauté d’étudiants! Je me sens soutenu et motivé à progresser chaque jour."</p>
                                 </div>
@@ -183,24 +192,11 @@
         </div>
     </section>
 
-    <!-- Call to action section-->
-    <!-- <section class="cta">
-        <div class="cta-content">
-            <div class="container px-5">
-                <h2 class="text-white display-1 lh-1 mb-4">
-                    Stop waiting.
-                    <br />
-                    Start building.
-                </h2>
-                <a class="btn btn-outline-light py-3 px-4 rounded-pill" href="https://startbootstrap.com/theme/new-age" target="_blank">Download for free</a>
-            </div>
-        </div>
-    </section> -->
     <!-- App badge section-->
     <section class="bg-img" id="download">
         <div class="container px-5">
             <h2 class="text-center text-white font-alt mb-4">
-                Téléchargez l'application maintenant!</h2>
+                Téléchargez l'application maintenant !</h2>
             <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center">
                 <a class="me-lg-3 mb-4 mb-lg-0" href="#!"><img class="app-badge" src="assets/img/google-play-badge.svg" alt="..." /></a>
                 <a href="#!"><img class="app-badge" src="assets/img/app-store-badge.svg" alt="..." /></a>
@@ -210,7 +206,12 @@
     <!-- Footer-->
     <footer class="bg-black text-center py-3">
         <div class="container px-5">
-            <div class="text-white-50 small">
+            <div class="text-white-50 small text-center">
+                <div class="col-lg-4 my-3 my-lg-0 mx-auto pb-3">
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
                 <div class="mb-2">&copy; FaceNeuve 2023. All Rights Reserved.</div>
                 <a href="#!">Privacy</a>
                 <span class="mx-1">&middot;</span>
