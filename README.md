@@ -1,4 +1,4 @@
-# ViseNeuve
+# FaceNeuve
 
 Projet académique du Collège Maisonneuve visant à créer une plateforme web pour collecter des informations auprès des étudiants.  
 Le site est développé avec **Laravel 10**, **Bootstrap** et utilise **MySQL** comme base de données (gérée via phpMyAdmin).  
