@@ -30,13 +30,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
-                    <li class="nav-item"><a class="nav-link me-lg-3" href="#features">Features</a></li>
-                    <li class="nav-item"><a class="nav-link me-lg-3" href="#download">Download</a></li>
+                    <li class="nav-item"><a class="nav-link me-lg-3" href="#features">Lorem, ipsum.</a></li>
+                    <li class="nav-item"><a class="nav-link me-lg-3" href="#download">Messages</a></li>
                 </ul>
                 <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
                     <span class="d-flex align-items-center">
                         <i class="bi-chat-text-fill me-2"></i>
-                        <span class="small">Send Feedback</span>
+                        <span class="small">Se connecter</span>
                     </span>
                 </button>
             </div>
@@ -47,13 +47,15 @@
         <div class="container px-5">
             <div class="row gx-5 align-items-center">
                 <div class="col-lg-6">
-                    <!-- Mashead text and app badges-->
+                    <!-- Texte d'accueil -->
                     <div class="mb-5 mb-lg-0 text-center text-lg-start">
-                        <h1 class="display-1 lh-1 mb-3">Showcase your app beautifully.</h1>
-                        <p class="lead fw-normal text-muted mb-5">Launch your mobile app landing page faster with this free, open source theme from Start Bootstrap!</p>
+                        <h1 class="display-1 lh-1 mb-3">Bienvenue sur ViseNeuve</h1>
+                        <p class="lead fw-normal text-muted mb-5">
+                            La plateforme du Collège Maisonneuve pour rassembler les étudiants, partager des informations et bâtir une communauté dynamique.
+                        </p>
                         <div class="d-flex flex-column flex-lg-row align-items-center">
-                            <a class="me-lg-3 mb-4 mb-lg-0" href="#!"><img class="app-badge" src="assets/img/google-play-badge.svg" alt="..." /></a>
-                            <a href="#!"><img class="app-badge" src="assets/img/app-store-badge.svg" alt="..." /></a>
+                            <a class="btn btn-primary btn-lg me-lg-3 mb-4 mb-lg-0" href="#inscription">S'inscrire</a>
+                            <a class="btn btn-outline-dark btn-lg" href="#connexion">Se connecter</a>
                         </div>
                     </div>
                 </div>
@@ -62,10 +64,10 @@
                     <div class="masthead-device-mockup">
                         <svg class="circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                             <defs>
-                                <linearGradient id="circleGradient" gradientTransform="rotate(45)">
+                                <!-- <linearGradient id="circleGradient" gradientTransform="rotate(45)">
                                     <stop class="gradient-start-color" offset="0%"></stop>
                                     <stop class="gradient-end-color" offset="100%"></stop>
-                                </linearGradient>
+                                </linearGradient> -->
                             </defs>
                             <circle cx="50" cy="50" r="50"></circle>
                         </svg><svg class="shape-1 d-none d-sm-block" viewBox="0 0 240.83 240.83" xmlns="http://www.w3.org/2000/svg">
@@ -93,87 +95,60 @@
         </div>
     </header>
     <!-- Quote/testimonial aside-->
-    <aside class="text-center bg-gradient-primary-to-secondary">
+    <aside class="text-center bg-gradient-primary-to-dark">
         <div class="container px-5">
             <div class="row gx-5 justify-content-center">
                 <div class="col-xl-8">
-                    <div class="h2 fs-1 text-white mb-4">"An intuitive solution to a common problem that we all face, wrapped up in a single app!"</div>
-                    <img src="assets/img/tnw-logo.svg" alt="..." style="height: 3rem" />
+                    <div class="h2 fs-1 text-white mb-4">
+                        "ViseNeuve facilite la vie étudiante en centralisant l’information et en renforçant les liens entre les étudiants du Collège Maisonneuve."
+                    </div>
+                    <img src="assets/img/maisonneuve-logo.png" alt="Collège Maisonneuve" style="height: 3rem" />
                 </div>
             </div>
         </div>
     </aside>
+
     <!-- App features section-->
-    <section id="features">
+    <section id="features" class="features">
         <div class="container px-5">
             <div class="row gx-5 align-items-center">
-                <div class="col-lg-8 order-lg-1 mb-5 mb-lg-0">
+                <div class="col-lg-8 mb-5 mb-lg-0 mx-auto">
                     <div class="container-fluid px-5">
                         <div class="row gx-5">
                             <div class="col-md-6 mb-5">
                                 <!-- Feature item-->
                                 <div class="text-center">
-                                    <i class="bi-phone icon-feature text-gradient d-block mb-3"></i>
-                                    <h3 class="font-alt">Device Mockups</h3>
-                                    <p class="text-muted mb-0">Ready to use HTML/CSS device mockups, no Photoshop required!</p>
+                                    <i class="bi-chat-dots icon-feature text-gradient d-block mb-3"></i>
+                                    <h3 class="font-alt">Camille R.</h3>
+                                    <p class="text-muted mb-0">"FaceNeuve m’a permis de mieux organiser mes cours et de collaborer facilement avec mes camarades."</p>
                                 </div>
                             </div>
+
                             <div class="col-md-6 mb-5">
                                 <!-- Feature item-->
                                 <div class="text-center">
-                                    <i class="bi-camera icon-feature text-gradient d-block mb-3"></i>
-                                    <h3 class="font-alt">Flexible Use</h3>
-                                    <p class="text-muted mb-0">Put an image, video, animation, or anything else in the screen!</p>
+                                    <i class="bi-person-circle icon-feature text-gradient d-block mb-3"></i>
+                                    <h3 class="font-alt">Julien M.</h3>
+                                    <p class="text-muted mb-0">"J’aime l’interface simple et intuitive, ça rend l’apprentissage beaucoup plus agréable."</p>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6 mb-5 mb-md-0">
+                            <div class="col-md-6 mb-5">
                                 <!-- Feature item-->
                                 <div class="text-center">
-                                    <i class="bi-gift icon-feature text-gradient d-block mb-3"></i>
-                                    <h3 class="font-alt">Free to Use</h3>
-                                    <p class="text-muted mb-0">As always, this theme is free to download and use for any purpose!</p>
+                                    <i class="bi-lightbulb icon-feature text-gradient d-block mb-3"></i>
+                                    <h3 class="font-alt">Sofia L.</h3>
+                                    <p class="text-muted mb-0">"Grâce à FaceNeuve, j’ai pu trouver de nouvelles méthodes d’étude et partager des idées innovantes."</p>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+
+                            <div class="col-md-6 mb-5">
                                 <!-- Feature item-->
                                 <div class="text-center">
-                                    <i class="bi-patch-check icon-feature text-gradient d-block mb-3"></i>
-                                    <h3 class="font-alt">Open Source</h3>
-                                    <p class="text-muted mb-0">Since this theme is MIT licensed, you can use it commercially!</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 order-lg-0">
-                    <!-- Features section device mockup-->
-                    <div class="features-device-mockup">
-                        <svg class="circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <defs>
-                                <linearGradient id="circleGradient" gradientTransform="rotate(45)">
-                                    <stop class="gradient-start-color" offset="0%"></stop>
-                                    <stop class="gradient-end-color" offset="100%"></stop>
-                                </linearGradient>
-                            </defs>
-                            <circle cx="50" cy="50" r="50"></circle>
-                        </svg><svg class="shape-1 d-none d-sm-block" viewBox="0 0 240.83 240.83" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03" transform="translate(120.42 -49.88) rotate(45)"></rect>
-                            <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03" transform="translate(-49.88 120.42) rotate(-45)"></rect>
-                        </svg><svg class="shape-2 d-none d-sm-block" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="50" cy="50" r="50"></circle>
-                        </svg>
-                        <div class="device-wrapper">
-                            <div class="device" data-device="iPhoneX" data-orientation="portrait" data-color="black">
-                                <div class="screen bg-black">
-                                    <!-- PUT CONTENTS HERE:-->
-                                    <!-- * * This can be a video, image, or just about anything else.-->
-                                    <!-- * * Set the max width of your media to 100% and the height to-->
-                                    <!-- * * 100% like the demo example below.-->
-                                    <video muted="muted" autoplay="" loop="" style="max-width: 100%; height: 100%">
-                                        <source src="assets/img/demo-screen.mp4" type="video/mp4" />
-                                    </video>
+                                    <i class="bi-emoji-smile icon-feature text-gradient d-block mb-3"></i>
+                                    <h3 class="font-alt">David P.</h3>
+                                    <p class="text-muted mb-0">"Une vraie communauté d’étudiants! Je me sens soutenu et motivé à progresser chaque jour."</p>
                                 </div>
                             </div>
                         </div>
@@ -181,23 +156,35 @@
                 </div>
             </div>
         </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 30 1440 220">
+            <path d="M0,192L60,181.3C120,171,240,149,360,138.7C480,128,600,128,720,138.7C840,149,960,171,1080,160C1200,149,1320,107,1380,85.3L1440,64" fill="none" stroke="#0099ff" stroke-width="0.5" />
+        </svg>
     </section>
     <!-- Basic features section-->
-    <section class="bg-light">
+    <section class="border-top-dark">
         <div class="container px-5">
             <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
                 <div class="col-12 col-lg-5">
-                    <h2 class="display-4 lh-1 mb-4">Enter a new age of web design</h2>
-                    <p class="lead fw-normal text-muted mb-5 mb-lg-0">This section is perfect for featuring some information about your application, why it was built, the problem it solves, or anything else! There's plenty of space for text here, so don't worry about writing too much.</p>
+                    <h2 class="display-4 lh-1 mb-4">Découvrez FaceNeuve</h2>
+                    <p class="lead fw-normal text-muted mb-5 mb-lg-0">
+                        FaceNeuve est une plateforme pensée par et pour les étudiants.
+                        Elle facilite la collaboration, le partage de ressources et la création d’un réseau d’entraide.
+                        Que ce soit pour mieux comprendre un cours, trouver des idées innovantes ou simplement rester motivé,
+                        FaceNeuve vous accompagne dans votre parcours académique.
+                    </p>
+                    <a class="btn btn-outline-dark py-3 px-4 rounded-pill mt-5" href="https://startbootstrap.com/theme/new-age" target="_blank">Se connecter</a>
                 </div>
                 <div class="col-sm-8 col-md-6">
-                    <div class="px-5 px-sm-0"><img class="img-fluid rounded-circle" src="https://source.unsplash.com/u8Jn2rzYIps/900x900" alt="..." /></div>
+                    <div class="px-5 px-sm-0">
+                        <img class="img-fluid rounded-circle" src="/assets/img/eleves.jpg" alt="Étudiants qui discutent au corridor" />
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
     <!-- Call to action section-->
-    <section class="cta">
+    <!-- <section class="cta">
         <div class="cta-content">
             <div class="container px-5">
                 <h2 class="text-white display-1 lh-1 mb-4">
@@ -208,11 +195,12 @@
                 <a class="btn btn-outline-light py-3 px-4 rounded-pill" href="https://startbootstrap.com/theme/new-age" target="_blank">Download for free</a>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- App badge section-->
-    <section class="bg-gradient-primary-to-secondary" id="download">
+    <section class="bg-img" id="download">
         <div class="container px-5">
-            <h2 class="text-center text-white font-alt mb-4">Get the app now!</h2>
+            <h2 class="text-center text-white font-alt mb-4">
+                Téléchargez l'application maintenant!</h2>
             <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center">
                 <a class="me-lg-3 mb-4 mb-lg-0" href="#!"><img class="app-badge" src="assets/img/google-play-badge.svg" alt="..." /></a>
                 <a href="#!"><img class="app-badge" src="assets/img/app-store-badge.svg" alt="..." /></a>
@@ -220,10 +208,10 @@
         </div>
     </section>
     <!-- Footer-->
-    <footer class="bg-black text-center py-5">
+    <footer class="bg-black text-center py-3">
         <div class="container px-5">
             <div class="text-white-50 small">
-                <div class="mb-2">&copy; Your Website 2023. All Rights Reserved.</div>
+                <div class="mb-2">&copy; FaceNeuve 2023. All Rights Reserved.</div>
                 <a href="#!">Privacy</a>
                 <span class="mx-1">&middot;</span>
                 <a href="#!">Terms</a>
