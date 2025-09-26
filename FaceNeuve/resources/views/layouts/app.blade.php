@@ -26,7 +26,7 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
         <div class="container px-5">
-            <a class="navbar-brand" href="#page-top"><img src="{{ asset('img/logo_faceneuve.png') }}" alt="Logo FaceNeuve"></a>
+            <a class="navbar-brand" href="#page-top"><img width="80px" height="80px" src="{{ asset('/assets/img/logo_faceneuve.png') }}" alt="Logo FaceNeuve"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="bi-list"></i>
