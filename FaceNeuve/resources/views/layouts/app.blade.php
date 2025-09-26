@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>New Age - Start Bootstrap Theme</title>
+    <title>FaceNeuve</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
@@ -19,14 +19,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&amp;display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
 </head>
 
-<body id="page-top">
+<body id="page-top" class="d-flex flex-column min-vh-100">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
         <div class="container px-5">
-            <a class="navbar-brand" href="#page-top"><img src="assets/img/logo_faceneuve.png" width="60px" height="60px" alt="..." /></a>
+            <a class="navbar-brand" href="#page-top"><img src="{{ asset('img/logo_faceneuve.png') }}" alt="Logo FaceNeuve"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="bi-list"></i>
@@ -36,7 +36,7 @@
                     <li class="nav-item"><a class="nav-link me-lg-3" href="#features">Lorem, ipsum.</a></li>
                     <li class="nav-item"><a class="nav-link me-lg-3" href="#download">Messages</a></li>
                     <li class="nav-item"><a class="nav-link me-lg-3" href="#download">Messages</a></li>
-                    <li class="nav-item"><a class="nav-link me-lg-3" href="#download">Messages</a></li>
+                    <li class="nav-item"><a class="nav-link me-lg-3" href="{{ route('user.create') }}">S'inscrire</a></li>
                 </ul>
                 <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
                     <span class="d-flex align-items-center">
@@ -52,7 +52,7 @@
     @yield('content')
 
     <!-- Footer-->
-    <footer class="bg-black text-center py-3">
+    <footer class="bg-black text-center py-3 mt-auto">
         <div class="container px-5">
             <div class="col-lg-4 my-lg-0 mx-auto">
                 <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Courriel"><i class="fa-solid fa-envelope"></i></a>
