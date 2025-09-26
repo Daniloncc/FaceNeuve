@@ -50,6 +50,26 @@
 
     <!-- Content -->
     @yield('content')
+
+    <!-- Footer-->
+    <footer class="bg-black text-center py-3">
+        <div class="container px-5">
+            <div class="col-lg-4 my-lg-0 mx-auto">
+                <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Courriel"><i class="fa-solid fa-envelope"></i></a>
+                <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="text-white-50 small mt-2">
+                <div class="mb-2">&copy; Danilo Costa {{ date('Y') }}. All Rights Reserved.</div>
+                <a href="#!">Privacy</a>
+                <span class="mx-1">&middot;</span>
+                <a href="#!">Terms</a>
+                <span class="mx-1">&middot;</span>
+                <a href="#!">FAQ</a>
+            </div>
+        </div>
+    </footer>
+
     <!-- Feedback Modal-->
     <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
