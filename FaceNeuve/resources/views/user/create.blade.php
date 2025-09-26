@@ -62,6 +62,12 @@
                         <input class="form-control" id="city" type="text" name="city" placeholder="Ton anniversaire *" data-sb-validations="required" />
                         <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
                     </div>
+                    <div class="form-group mb-md-0">
+                        <!-- Phone number input-->
+                        <label for="password">Mot de pass:</label>
+                        <input class="form-control" id="password" type="password" name="password" placeholder="Ton mot de passe *" data-sb-validations="required" />
+                        <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                    </div>
                 </div>
 
             </div>
