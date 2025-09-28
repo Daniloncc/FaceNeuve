@@ -17,6 +17,7 @@
         <!-- https://startbootstrap.com/solution/contact-forms-->
         <!-- to get an API token!-->
         <form id="contactForm" data-sb-form-api-token="API_TOKEN" class="mt-5">
+            @csrf
             <div class="row align-items-stretch mb-5">
                 <div class="col-md-6 mx-auto d-flex flex-column gap-3">
                     <div class="form-group">
@@ -62,6 +63,21 @@
                         <input class="form-control" id="city" type="text" name="city" placeholder="Ton anniversaire *" data-sb-validations="required" />
                         <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
                     </div>
+
+                    <div class="form-group mb-md-0">
+                        <lablel for="city_id">Ville :</lablel>
+                        <select name="city_id" id="city_id" class="form-control">
+                            <option value="">Choisissez la ville</option>
+                            @foreach($cities as $city)
+                            <option value="{{ $city->id }}"
+                                @if(old('city_id')==$city->id || (isset($user) && $user->city_id == $city->id)) selected @endif>
+                                {{ $city->city }}
+                            </option>
+                            @endforeach
+                        </select>
+                    </div>
+
+
                     <div class="form-group mb-md-0">
                         <!-- Phone number input-->
                         <label for="password">Mot de pass:</label>

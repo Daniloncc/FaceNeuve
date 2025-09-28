@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\City;
 
 class UserController extends Controller
 {
@@ -19,8 +20,12 @@ class UserController extends Controller
      */
     public function create()
     {
+        $cities = City::get(['id', 'city', 'abreviation']);
+        // print("<pre>");
+        // print_r($cities->toArray());
+        // print("</pre>");
         //
-        return view('user.create');
+        return view('user.create', ['cities' => $cities]);
     }
 
     /**
