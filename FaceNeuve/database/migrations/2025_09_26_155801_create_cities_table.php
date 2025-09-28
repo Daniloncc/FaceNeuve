@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('city', 100);
             $table->string('abreviation', 3);
-            $table->unsignedBigInteger('user_id');
             $table->timestamps();
         });
     }

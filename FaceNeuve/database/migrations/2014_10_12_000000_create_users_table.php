@@ -18,12 +18,13 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('phone', 20);
-            $table->string('adress', 150);
+            $table->string('address', 150);
             // a voir ca
-            $table->string('birthday', 80);
+            $table->date('birthday');
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+            $table->unsignedBigInteger('city_id');
             $table->foreign('city_id')->references('id')->on('cities')->onDelete('cascade');
         });
     }
