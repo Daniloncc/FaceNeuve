@@ -20,11 +20,11 @@ class UserController extends Controller
      */
     public function create()
     {
-        $cities = City::get(['id', 'city', 'abreviation']);
+        $cities = City::select(['id', 'city', 'abreviation'])->orderBy('city', 'ASC')->get();
         // print("<pre>");
         // print_r($cities->toArray());
         // print("</pre>");
-        //
+
         return view('user.create', ['cities' => $cities]);
     }
 
@@ -33,6 +33,17 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+        print_r($request->all());
+        $request->validate([
+            'firstname' => 'required|regex:/^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/|max:30',
+            'name' => 'required|regex:/^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/|max:80',
+            'email' => 'required|string',
+            'phone' => 'required|regex:/^[0-9]+$/',
+            'address' => 'required|string|max:150',
+            'birthday' => 'required|string|date',
+            'password' => 'required|regex:/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]+$/|max:150',
+            'city_id' => 'required|integer',
+        ]);
         //
     }
 

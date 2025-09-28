@@ -18,3 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get("/create/user", [UserController::class, 'create'])->name('user.create');
+
+Route::get("/create/user", [UserController::class, 'create'])->name('user.create');
+
+Route::post("/create/user", [UserController::class, 'store'])->name('user.store');
