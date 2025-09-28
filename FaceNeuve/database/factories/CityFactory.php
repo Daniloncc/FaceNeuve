@@ -17,21 +17,21 @@ class CityFactory extends Factory
     public function definition()
     {
         $quebecCities = [
-            'Montréal' => 'MTL',
+            'Blainville' => 'BLA',
+            'Boucherville' => 'BOU',
+            'Brossard' => 'BRO',
+            'Châteauguay' => 'CHA',
+            'Dollard-des-Ormeaux' => 'DDO',
             'Laval' => 'LAV',
             'Longueuil' => 'LON',
-            'Terrebonne' => 'TER',
-            'Repentigny' => 'REP',
-            'Boucherville' => 'BOU',
-            'Saint-Jérôme' => 'SJE',
-            'Châteauguay' => 'CHA',
-            'Saint-Jean-sur-Richelieu' => 'SJR',
-            'Dollard-des-Ormeaux' => 'DDO',
-            'Saint-Eustache' => 'SEU',
-            'Saint-Constant' => 'SCO',
-            'Blainville' => 'BLA',
             'Mirabel' => 'MIR',
-            'Brossard' => 'BRO'
+            'Montréal' => 'MTL',
+            'Repentigny' => 'REP',
+            'Saint-Constant' => 'SCO',
+            'Saint-Eustache' => 'SEU',
+            'Saint-Jean-sur-Richelieu' => 'SJR',
+            'Saint-Jérôme' => 'SJE',
+            'Terrebonne' => 'TER'
         ];
 
         $city = $this->faker->randomElement(array_keys($quebecCities));
