@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\City;
+use App\Models\User;
+use Carbon\Carbon;
 
 class UserController extends Controller
 {
@@ -13,6 +15,11 @@ class UserController extends Controller
     public function index()
     {
         //
+        $users = User::select()->orderby('firstname')->get();
+        // print("<pre>");
+        // print_r($users->toArray());
+        // print("</pre>");
+        return view('user.index', ['users' => $users]);
     }
 
     /**
@@ -33,18 +40,39 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        print_r($request->all());
+        // print_r($request->all());
         $request->validate([
             'firstname' => 'required|regex:/^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/|max:30',
             'name' => 'required|regex:/^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/|max:80',
             'email' => 'required|string',
             'phone' => 'required|regex:/^[0-9]+$/',
             'address' => 'required|string|max:150',
-            'birthday' => 'required|string|date',
+            'birthday' => [
+                'required',
+                'date',
+                'before_or_equal:' . Carbon::now()->subYears(16)->format('Y-m-d')
+            ],
             'password' => 'required|regex:/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]+$/|max:150',
             'city_id' => 'required|integer',
         ]);
         //
+
+        $user = User::create([
+            'firstname' => $request->firstname,
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'address' => $request->address,
+            'birthday' => $request->birthday,
+            'password' => $request->password,
+            'city_id' => $request->city_id,
+        ]);
+
+        $users = User::select()->get();
+        // $_SESSION['Success] = 'Task created Successfull'
+        //return view('user.login');
+        return redirect()->route('user.index')->with('message', 'Utilisateur cree avec sucess !');
+        //return $task;
     }
 
     /**
