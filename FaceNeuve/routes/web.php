@@ -26,6 +26,8 @@ Route::get("/edit/student/{student}", [StudentController::class, 'edit'])->name(
 
 Route::put("/edit/student/{student}", [StudentController::class, 'update'])->name('student.update');
 
+Route::delete("/student/{student}", [StudentController::class, 'destroy'])->name('student.destroy');
+
 Route::post("/create/student", [StudentController::class, 'store'])->name('student.store');
 
 Route::get("/index/student", [StudentController::class, 'index'])->name('student.index');

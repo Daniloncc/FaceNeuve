@@ -45,7 +45,11 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Annuler</button>
-                    <button type="button" class="btn btn-danger">Supprimer</button>
+                    <form action="" method="post">
+                        @csrf
+                        @method('delete')
+                        <input type="submit" value="Supprimer" class="btn btn-sm btn-outline-danger">
+                    </form>
                 </div>
             </div>
         </div>
