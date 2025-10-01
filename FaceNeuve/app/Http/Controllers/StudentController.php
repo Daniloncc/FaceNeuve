@@ -102,7 +102,31 @@ class StudentController extends Controller
      */
     public function update(Request $request, Student $student)
     {
+        $request->validate([
+            'firstname' => 'required|regex:/^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/|max:30',
+            'name' => 'required|regex:/^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/|max:80',
+            'email' => 'required|string',
+            'phone' => 'required|regex:/^[0-9]+$/',
+            'address' => 'required|string|max:150',
+            'birthday' => [
+                'required',
+                'date',
+                'before_or_equal:' . Carbon::now()->subYears(16)->format('Y-m-d')
+            ],
+            'city_id' => 'required|integer',
+        ]);
+
+        $student->update([
+            'firstname' => $request->firstname,
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'address' => $request->address,
+            'birthday' => $request->birthday,
+            'city_id' => $request->city_id,
+        ]);
         //
+        return redirect()->route('student.index', $student->id,)->with('message', "L'élève " . $request->firstname . " " . $request->name . " a mis à jour !");
     }
 
     /**

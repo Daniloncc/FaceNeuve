@@ -2,15 +2,15 @@
 @section('title', 'Bienvenue')
 @section('content')
 
-<section class="page-section mt-5" id="contact">
+<section class="page-section" id="contact">
     <div class="container">
-        <div class=" mt-5">
+        <div>
             <h2 class="section-heading text-uppercase">Nos élèves</h2>
             <h3 class="section-subheading text-muted">Les étudiants inscrits sur la plateforme :</h3>
         </div>
 
         @foreach($students as $student)
-        <div class="card mb-4">
+        <div class="card mb-4 mt-5">
             <div class="card-header">
                 <h3 class="card-title">{{$student->name}}, <strong>{{$student->firstname}}</strong></h3>
             </div>

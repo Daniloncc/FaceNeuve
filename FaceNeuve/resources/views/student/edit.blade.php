@@ -10,6 +10,7 @@
 
         </div>
         <form id="contactForm" class="mt-5" method="post">
+            @method('put')
             @csrf
             <div class="row align-items-stretch mb-5">
                 <div class="col-md-6 mx-auto d-flex flex-column gap-3">
@@ -81,7 +82,7 @@
 
             </div>
             <!-- Submit Button-->
-            <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase " id="submitButton" type="submit">Mise a jour</button></div>
+            <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase " id="submitButton" type="submit">Mettre a jour</button></div>
         </form>
     </div>
 </section>

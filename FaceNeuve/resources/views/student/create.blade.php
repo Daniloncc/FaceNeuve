@@ -2,9 +2,9 @@
 @section('title', 'Bienvenue')
 @section('content')
 
-<section class="page-section mt-5" id="contact">
+<section class="page-section" id="contact">
     <div class="container">
-        <div class="text-center mt-5">
+        <div class="text-center">
             <h2 class="section-heading text-uppercase">Faites votre inscription</h2>
             <h3 class="section-subheading text-muted">Fournissez vos données pour créer votre compte :</h3>
 
