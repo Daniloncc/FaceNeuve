@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Student;
+use App\Models\City;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class StudentController extends Controller
@@ -12,7 +14,11 @@ class StudentController extends Controller
      */
     public function index()
     {
-        //
+        $students = Student::select()->orderby('firstname')->get();
+        // print("<pre>");
+        // print_r($student->toArray());
+        // print("</pre>");
+        return view('student.index', ['students' => $students]);
     }
 
     /**
@@ -20,7 +26,12 @@ class StudentController extends Controller
      */
     public function create()
     {
-        //
+        $cities = City::select(['id', 'city', 'abreviation'])->orderBy('city', 'ASC')->get();
+        // print("<pre>");
+        // print_r($cities->toArray());
+        // print("</pre>");
+
+        return view('student.create', ['cities' => $cities]);
     }
 
     /**
@@ -28,7 +39,36 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
+        // print_r($request->all());
+        $request->validate([
+            'firstname' => 'required|regex:/^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/|max:30',
+            'name' => 'required|regex:/^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/|max:80',
+            'email' => 'required|string',
+            'phone' => 'required|regex:/^[0-9]+$/',
+            'address' => 'required|string|max:150',
+            'birthday' => [
+                'required',
+                'date',
+                'before_or_equal:' . Carbon::now()->subYears(16)->format('Y-m-d')
+            ],
+            'city_id' => 'required|integer',
+        ]);
         //
+
+        $student = Student::create([
+            'firstname' => $request->firstname,
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'address' => $request->address,
+            'birthday' => $request->birthday,
+            'city_id' => $request->city_id,
+        ]);
+
+        $students = Student::select()->get();
+        // $_SESSION['Success] = 'Task created Successfull'
+        //return view('user.login');
+        return redirect()->route('student.index')->with('message', 'Etudiant ajoute avec sucess !');
     }
 
     /**
