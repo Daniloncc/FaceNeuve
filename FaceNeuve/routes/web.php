@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\StudentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,10 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get("/create/user", [UserController::class, 'create'])->name('user.create');
+Route::get("/create/student", [StudentController::class, 'create'])->name('student.create');
 
-Route::get("/create/user", [UserController::class, 'create'])->name('user.create');
+Route::get("/create/student", [StudentController::class, 'create'])->name('student.create');
 
-Route::post("/create/user", [UserController::class, 'store'])->name('user.store');
+Route::post("/create/student", [StudentController::class, 'store'])->name('student.store');
 
-Route::get("/index/user", [UserController::class, 'index'])->name('user.index');
+Route::get("/index/student", [StudentController::class, 'index'])->name('student.index');
