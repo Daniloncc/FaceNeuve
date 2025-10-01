@@ -38,7 +38,7 @@ class CityFactory extends Factory
 
         return [
             'city' => $city,
-            'abbreviation' => $quebecCities[$city]
+            'abreviation' => $quebecCities[$city]
         ];
     }
 }
