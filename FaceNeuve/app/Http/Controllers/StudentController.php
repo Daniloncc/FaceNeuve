@@ -66,6 +66,7 @@ class StudentController extends Controller
             'city_id' => $request->city_id,
         ]);
 
+
         $students = Student::select()->get();
         // $_SESSION['Success] = 'Task created Successfull'
         //return view('user.login');
@@ -77,6 +78,8 @@ class StudentController extends Controller
      */
     public function show(Student $student)
     {
+
+
         //
     }
 
@@ -85,6 +88,12 @@ class StudentController extends Controller
      */
     public function edit(Student $student)
     {
+
+        // print("<pre>");
+        // print_r($student->toArray());
+        // print("</pre>");
+        $cities = City::select(['id', 'city', 'abreviation'])->orderBy('city', 'ASC')->get();
+        return view('student.edit', ['student' => $student, 'cities' => $cities]);
         //
     }
 

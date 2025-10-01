@@ -21,7 +21,7 @@
             </div>
             <div class="card-footer">
                 <div class="d-flex justify-content-end gap-3">
-                    <a href="" class="btn btn-sm btn-outline-primary">Edit</a>
+                    <a href="{{ route('student.edit', $student->id) }}" class="btn btn-sm btn-outline-primary">Edit</a>
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         Delete

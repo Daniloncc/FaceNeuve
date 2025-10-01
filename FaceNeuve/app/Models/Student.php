@@ -18,4 +18,5 @@ class Student extends Model
         'birthday',
         'city_id',
     ];
+
 }
