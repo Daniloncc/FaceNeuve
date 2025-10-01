@@ -21,18 +21,39 @@
             </div>
             <div class="card-footer">
                 <div class="d-flex justify-content-end gap-3">
-                    <a href="{{ route('student.edit', $student->id) }}" class="btn btn-sm btn-outline-primary">Edit</a>
+                    <a href="{{ route('student.edit', $student->id) }}" class="btn btn-sm btn-outline-primary">Éditer</a>
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        Delete
+                    <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" data-modal>
+                        Supprimer
                     </button>
-
                 </div>
             </div>
         </div>
         @endforeach
+    </div>
 
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Confirmation</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body">
+                    Êtes-vous sûr de vouloir supprimer cet élève ?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Annuler</button>
+                    <button type="button" class="btn btn-danger">Supprimer</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    </div>
+    </div>
+    </div>
     </div>
 </section>
 
