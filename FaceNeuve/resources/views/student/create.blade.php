@@ -48,7 +48,7 @@
                     <div class="form-group mb-md-0">
                         <!-- Phone number input-->
                         <label for="address">Adresse:</label>
-                        <input class="form-control" id="address" type="text" name="address" placeholder="Ton Adresse *" />
+                        <input class="form-control" id="address" type="text" name="address" placeholder="Ton Adresse *" value="{{ old('address') }}" />
                         @if($errors->has('address'))
                         <div class="text-danger mt-2">{{ $errors->first('address') }}</div>
                         @endif
@@ -75,14 +75,6 @@
                         </select>
                         @if($errors->has('city_id'))
                         <div class="text-danger mt-2">{{ $errors->first('city_id') }}</div>
-                        @endif
-                    </div>
-                    <div class="form-group mb-md-0">
-                        <!-- Phone number input-->
-                        <label for="password">Mot de pass:</label>
-                        <input class="form-control" id="password" type="password" name="password" placeholder="Ton mot de passe *" />
-                        @if($errors->has('password'))
-                        <div class="text-danger mt-2">{{ $errors->first('password') }}</div>
                         @endif
                     </div>
                 </div>

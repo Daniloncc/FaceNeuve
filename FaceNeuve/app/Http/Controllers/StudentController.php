@@ -40,6 +40,7 @@ class StudentController extends Controller
     public function store(Request $request)
     {
         // print_r($request->all());
+        // die;
         $request->validate([
             'firstname' => 'required|regex:/^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/|max:30',
             'name' => 'required|regex:/^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/|max:80',

@@ -9,15 +9,15 @@
             <h3 class="section-subheading text-muted">Les étudiants inscrits sur la plateforme :</h3>
         </div>
 
-        @foreach($users as $user)
+        @foreach($students as $student)
         <div class="card mb-4">
             <div class="card-header">
-                <h3 class="card-title">{{$user->name}}, <strong>{{$user->firstname}}</strong></h3>
+                <h3 class="card-title">{{$student->name}}, <strong>{{$student->firstname}}</strong></h3>
             </div>
             <div class="card-body">
-                <p class="card-text">{{$user->email}}</p>
-                <p class="card-text">{{$user->phone}}</p>
-                <p class="card-text">{{$user->birthday}}</p>
+                <p class="card-text">{{$student->email}}</p>
+                <p class="card-text">{{$student->phone}}</p>
+                <p class="card-text">{{$student->birthday}}</p>
             </div>
             <div class="card-footer">
                 <div class="d-flex justify-content-end gap-3">
