@@ -19,8 +19,9 @@ class StudentFactory extends Factory
     {
         return [
             'firstname' => fake()->firstName(),
-            'lastname' => fake()->lastName(),
+            'name' => fake()->lastName(),
             'email' => fake()->unique()->safeEmail(),
+            'phone' => fake()->unique()->phoneNumber(),
             'address' => fake()->buildingNumber() . ' ' . fake()->streetName(),
             'birthday' => fake()->dateTimeBetween('-65 years', '-16 years'),
             'city_id' => City::inRandomOrder()->first()->id ?? City::factory(),
