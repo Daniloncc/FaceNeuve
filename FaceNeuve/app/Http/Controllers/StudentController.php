@@ -79,6 +79,7 @@ class StudentController extends Controller
     public function show(Student $student)
     {
 
+        return $student;
 
         //
     }
@@ -135,5 +136,6 @@ class StudentController extends Controller
     public function destroy(Student $student)
     {
         //
+        print("ici");;
     }
 }
