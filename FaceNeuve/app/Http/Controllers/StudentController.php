@@ -14,7 +14,7 @@ class StudentController extends Controller
      */
     public function index()
     {
-        $students = Student::select()->orderby('firstname')->get();
+        $students = Student::select()->orderby('firstname')->paginate(5);
         // print("<pre>");
         // print_r($student->toArray());
         // print("</pre>");
@@ -79,7 +79,8 @@ class StudentController extends Controller
     public function show(Student $student)
     {
 
-        return $student;
+
+        return view('student.show', ['student' => $student]);
 
         //
     }

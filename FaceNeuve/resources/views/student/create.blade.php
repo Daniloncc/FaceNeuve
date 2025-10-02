@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Bienvenue')
+@section('title', 'Nouveau eleve')
 @section('content')
 
 <section class="page-section" id="contact">
@@ -63,7 +63,7 @@
                         @endif
                     </div>
                     <div class="form-group mb-md-0">
-                        <lablel for="city_id">Ville :</lablel>
+                        <label for="city_id">Ville :</label>
                         <select name="city_id" id="city_id" class="form-control">
                             <option value="">Choisissez la ville</option>
                             @foreach($cities as $city)

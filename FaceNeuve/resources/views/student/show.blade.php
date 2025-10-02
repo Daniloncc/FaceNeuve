@@ -9,25 +9,29 @@
             <h3 class="section-subheading text-muted">Les étudiants inscrits sur la plateforme :</h3>
         </div>
         <div class="card mb-4 mt-5">
-            <div class="card-header">
-                <h3 class="card-title">{{$student->name}}, <strong>{{$student->firstname}}</strong></h3>
+            <div class="card-header text-bg-light">
+                <h3 class="card-title mt-1 mb-1">{{$student->name}}, <strong>{{$student->firstname}}</strong></h3>
             </div>
             <div class="card-body">
-                <p class="card-text">{{$student->email}}</p>
-                <p class="card-text">{{$student->phone}}</p>
-                <p class="card-text">{{$student->birthday}}</p>
+                <p class="card-text">Courriel: <strong>{{$student->email}}</strong></p>
+                <p class="card-text">Téléphone: <strong>{{$student->phone}}</strong></p>
+                <p class="card-text">Date de naissance: <strong>{{$student->birthday}}</strong></p>
+                <p class="card-text">Ville: <strong>{{$student->city->city}}</strong></p>
+                <p class="card-text">Adresse: <strong>{{$student->address}}</strong></p>
+
             </div>
-            <div class="card-footer">
+            <div class="card-footer text-bg-light">
                 <div class="d-flex justify-content-end gap-3">
-                    <a href="{{ route('student.edit', $student->id) }}" class="btn btn-sm btn-outline-primary">Editer</a>
+                    <a href="{{ route('student.edit', $student->id) }}" class="btn btn-sm btn-primary"><i class="bi bi-pen"></i> Editer</a>
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" data-modal>
-                        Supprimer
+                    <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" data-modal>
+                        <i class="bi bi-trash"></i> Supprimer
                     </button>
                 </div>
             </div>
         </div>
-        @endforeach
+
+        <a href="{{ route('student.index') }}" class="btn btn-sm btn-primary mt-3 p-2">← Retourner</a>
     </div>
 
     <!-- Modal -->

@@ -12,4 +12,9 @@ class City extends Model
         'city',
         'abreviation',
     ];
+
+    public function students()
+    {
+        return $this->hasMany(Student::class);
+    }
 }

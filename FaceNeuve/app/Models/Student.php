@@ -19,4 +19,9 @@ class Student extends Model
         'city_id',
     ];
 
+    public function city()
+    {
+        //cest pour faire une jointure, a chaque fois que jappelle la class 
+        return $this->belongsTo(City::class);
+    }
 }

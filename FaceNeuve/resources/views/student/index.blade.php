@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Bienvenue')
+@section('title', 'Etudiants')
 @section('content')
 
 <section class="page-section" id="contact">
@@ -9,24 +9,30 @@
             <h3 class="section-subheading text-muted">Les étudiants inscrits sur la plateforme :</h3>
         </div>
 
-        @foreach($students as $student)
-        <div class="card mb-4 mt-5">
-            <div class="card-header">
-                <h3 class="card-title">{{$student->name}}, <strong>{{$student->firstname}}</strong></h3>
-            </div>
-            <div class="card-body">
-                <p class="card-text">{{$student->email}}</p>
-                <p class="card-text">{{$student->phone}}</p>
-                <p class="card-text">{{$student->birthday}}</p>
-            </div>
-            <div class="card-footer">
-                <div class="d-flex justify-content-end gap-3">
-                    <a href="{{ route('student.show', $student->id) }}" class="btn btn-sm btn-outline-primary">Voir plus →</a>
-                </div>
-            </div>
-        </div>
-        @endforeach
+        <table class="container table table-striped mt-5">
+            <thead>
+                <tr class="navbar-brand fs-3">
+                    <th scope="col">Nom</th>
+                    <th scope="col">Courriel</th>
+                    <th scope="col">Ville</th>
+                    <th scope="col">Voir Plus</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($students as $student)
+                <tr>
+                    <th scope="row">{{$student->firstname}}</th>
+                    <td>{{$student->email}}</td>
+                    <td>{{$student->city->city}}</td>
+                    <td><a href="{{ route('student.show', $student->id) }}" class="btn btn-sm btn-outline-primary"><i class="bi bi-eye px-2"></i></a></td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+
+        <div class="mt-5 mr-auto">{{$students}}</div>
     </div>
+
 </section>
 
 @endsection('content')

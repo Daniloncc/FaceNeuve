@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Bienvenue')
+@section('title', 'Editer')
 @section('content')
 
 <section class="page-section mt-5" id="contact">
