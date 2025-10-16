@@ -1,14 +1,14 @@
 @extends('layouts.app')
-@section('title', 'Nouveau eleve')
+@section('title', 'Connexion')
 @section('content')
 
-<section class="page-section" id="contact">
+<section class="page-section" id="login">
     <div class="container">
         <div class="text-center">
-            <h2 class="section-heading text-uppercase">Faites votre inscription</h2>
-            <h3 class="section-subheading text-muted">Fournissez vos données pour créer votre compte :</h3>
-
+            <h2 class="section-heading text-uppercase">Connectez-vous à votre compte</h2>
+            <h3 class="section-subheading text-muted">Entrez vos identifiants pour accéder à votre espace personnel :</h3>
         </div>
+
         <form id="contactForm" class="mt-5" method="post">
             @csrf
             <div class="row align-items-stretch mb-5">

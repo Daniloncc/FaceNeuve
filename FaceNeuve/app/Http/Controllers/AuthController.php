@@ -27,31 +27,24 @@ class AuthController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request) {}
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function store(Request $request)
     {
-        //
+        $request->validate([
+            'email' => 'required|email|exists:users',
+            'password' => 'required|min:6|max:20'
+        ]);
+        $credentials = $request->only('email', 'password');
+        if (!Auth::validate($credentials)):
+            return redirect(route('login'))
+                ->withErrors(trans('auth.failed'))
+                ->withInput();
+        endif;
+        $user = Auth::getProvider()->retrieveByCredentials($credentials);
+        Auth::login($user);
+        return redirect()->intended(route('student.index'))->withSuccess('Signed in');
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
 
     /**
      * Remove the specified resource from storage.
