@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rules\Password;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -31,7 +32,6 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'firstname' => 'required|regex:/^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/|max:30',
             'name' => 'required|regex:/^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/|max:80',
             'email' => 'required|string|unique:users',
             'password' => [
@@ -42,10 +42,16 @@ class UserController extends Controller
                     ->letters()->mixedCase()->numbers()->max(20)
             ],
         ]);
-        print("<pre>");
-        print_r($request->toArray());
-        print("</pre>");
-        //
+        // print("<pre>");
+        // print_r($request->password);
+        // print("</pre>");
+        $user = new User;
+        $user->fill($request->except('password')); // Remplir SAUF password
+        $user->password = Hash::make($request->password); // Puis assigner le password hashé
+        $user->save();
+        // print("<pre>");
+        // print_r($user->toArray());
+        // print("</pre>");
     }
 
     /**

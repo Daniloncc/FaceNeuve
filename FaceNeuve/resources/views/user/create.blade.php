@@ -15,17 +15,9 @@
             <div class="row align-items-stretch mb-5">
                 <div class="col-md-6 mx-auto d-flex flex-column gap-3">
                     <div class="form-group">
-                        <!-- Prenom input-->
-                        <label for="firstname">Prenom :</label>
-                        <input class="form-control" id="firstname" name="firstname" type="text" placeholder="Ton Prenom" value="{{ old('firstname') }}" />
-                        @if($errors->has('firstname'))
-                        <div class="text-danger mt-2">{{ $errors->first('firstname') }}</div>
-                        @endif
-                    </div>
-                    <div class="form-group">
                         <!-- Nom input-->
-                        <label for="firstname">Nom :</label>
-                        <input class="form-control" id="name" name="name" type="text" placeholder="Ton nom " value="{{ old('name') }}" />
+                        <label for="name">Nom complet :</label>
+                        <input class="form-control" id="name" name="name" type="text" placeholder="Ton nom complet " value="{{ old('name') }}" />
                         @if($errors->has('name'))
                         <div class="text-danger mt-2">{{ $errors->first('name') }}</div>
                         @endif
