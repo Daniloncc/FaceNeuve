@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rules\Password;
 
 class UserController extends Controller
 {
@@ -29,6 +30,21 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'firstname' => 'required|regex:/^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/|max:30',
+            'name' => 'required|regex:/^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/|max:80',
+            'email' => 'required|string|unique:users',
+            'password' => [
+                'required',
+                'confirmed',
+                'string',
+                Password::min(6)
+                    ->letters()->mixedCase()->numbers()->max(20)
+            ],
+        ]);
+        print("<pre>");
+        print_r($request->toArray());
+        print("</pre>");
         //
     }
 

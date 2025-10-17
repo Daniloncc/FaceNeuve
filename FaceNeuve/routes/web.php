@@ -33,7 +33,7 @@ Route::delete("/student/{student}", [StudentController::class, 'destroy'])->name
 // User
 Route::get('/users', [UserController::class, 'index'])->name('user.index');
 Route::get('/registration', [UserController::class, 'create'])->name('user.create');
-
+Route::post('/registration', [UserController::class, 'store'])->name('user.store');
 // Connection 
 Route::get('/login', [AuthController::class, 'index'])->name('login');
 Route::post('/login', [AuthController::class, 'store'])->name('login.store');

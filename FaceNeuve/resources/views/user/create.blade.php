@@ -39,22 +39,19 @@
                         @endif
                     </div>
                     <div class="form-group">
-                        <!-- Password address input-->
+                        <!-- Password password input-->
                         <label for="courriel">Mot de passe :</label>
-                        <div class="text-primary mt-2">Le mot de passe doit contenir lettres et chiffres</div>
-                        <input class="form-control" id="password" type="password" name="password" value="{{ old('password') }}" />
+                        <div class="text-primary mt-2">Le mot de passe doit contenir lettres(Majuscule et minuscule) et chiffres</div>
+                        <input class="form-control" id="password" type="password" name="password" pattern="^[A-Za-z0-9]{6,20}$" value="{{ old('password') }}" />
 
                         @if($errors->has('password'))
                         <div class="text-danger mt-2">{{ $errors->first('password') }}</div>
                         @endif
                     </div>
                     <div class="form-group">
-                        <!-- Password address input-->
+                        <!-- Password password input-->
                         <label for="courriel">Confirmer mot de passe :</label>
-                        <input class="form-control" id="password_confirm" type="password" name="password_confirm" value="{{ old('password') }}" />
-                        @if($errors->has('password'))
-                        <div class="text-danger mt-2">{{ $errors->first('password') }}</div>
-                        @endif
+                        <input class="form-control" id="password_confirmation" type="password" name="password_confirmation" pattern="^[A-Za-z0-9]{6,20}$" value="{{ old('password') }}" />
                     </div>
                 </div>
             </div>
