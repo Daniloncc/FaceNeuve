@@ -63,7 +63,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        //
+        return view('user.show', ['user' => $user]);
     }
 
     /**
@@ -71,7 +71,9 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        //
+        // print("<pre>");
+        // print_r($user->toArray());
+        // print("</pre>");
     }
 
     /**

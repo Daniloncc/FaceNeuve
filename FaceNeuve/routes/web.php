@@ -34,6 +34,8 @@ Route::delete("/student/{student}", [StudentController::class, 'destroy'])->name
 Route::get('/users', [UserController::class, 'index'])->name('user.index');
 Route::get('/registration', [UserController::class, 'create'])->name('user.create');
 Route::post('/registration', [UserController::class, 'store'])->name('user.store');
+Route::get('/user/{user}', [UserController::class, 'show'])->name('user.show');
+Route::get('/edit/user/{user}', [UserController::class, 'edit'])->name('user.edit');
 // Connection 
 Route::get('/login', [AuthController::class, 'index'])->name('login');
 Route::post('/login', [AuthController::class, 'store'])->name('login.store');

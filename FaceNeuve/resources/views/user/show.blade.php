@@ -5,23 +5,18 @@
 <section class="page-section" id="contact">
     <div class="container">
         <div>
-            <h2 class="section-heading text-uppercase">Elève: </h2>
+            <h2 class="section-heading text-uppercase">Utilisateur</h2>
         </div>
         <div class="card mb-4 mt-5">
             <div class="card-header text-bg-light">
-                <h3 class="card-title mt-1 mb-1">{{$student->name}}, <strong>{{$student->firstname}}</strong></h3>
+                <h3 class="card-title mt-1 mb-1">{{$user->name}}</h3>
             </div>
             <div class="card-body">
-                <p class="card-text">Courriel: <strong>{{$student->email}}</strong></p>
-                <p class="card-text">Téléphone: <strong>{{$student->phone}}</strong></p>
-                <p class="card-text">Date de naissance: <strong>{{$student->birthday}}</strong></p>
-                <p class="card-text">Ville: <strong>{{$student->city->city}}</strong></p>
-                <p class="card-text">Adresse: <strong>{{$student->address}}</strong></p>
-
+                <p class="card-text">Courriel: <strong>{{$user->email}}</strong></p>
             </div>
             <div class="card-footer text-bg-light">
                 <div class="d-flex justify-content-end gap-3">
-                    <a href="{{ route('student.edit', $student->id) }}" class="btn btn-sm btn-primary"><i class="bi bi-pen"></i> Editer</a>
+                    <a href="{{ route('user.edit', $user->id) }}" class="btn btn-sm btn-primary"><i class="bi bi-pen"></i> Editer</a>
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" data-modal>
                         <i class="bi bi-trash"></i> Supprimer
@@ -30,7 +25,7 @@
             </div>
         </div>
 
-        <a href="{{ route('student.index') }}" class="btn btn-sm btn-primary mt-3 p-2">← Retourner</a>
+        <a href="{{ route('user.index') }}" class="btn btn-sm btn-primary mt-3 p-2">← Retourner</a>
     </div>
 
     <!-- Modal -->
@@ -46,7 +41,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Annuler</button>
-                    <form action="{{ route('student.destroy', $student->id) }}" method="post">
+                    <form action="" method="post">
                         @csrf
                         @method('delete')
                         <input type="submit" value="Supprimer" class="btn btn-sm btn-outline-danger">
