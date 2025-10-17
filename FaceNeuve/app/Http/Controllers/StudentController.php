@@ -39,12 +39,10 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        // print_r($request->all());
-        // die;
         $request->validate([
             'firstname' => 'required|regex:/^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/|max:30',
             'name' => 'required|regex:/^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/|max:80',
-            'email' => 'required|string',
+            'email' => 'required|string|unique:students,email',
             'phone' => 'required|regex:/^[0-9]+$/',
             'address' => 'required|string|max:150',
             'birthday' => [
@@ -136,7 +134,8 @@ class StudentController extends Controller
      */
     public function destroy(Student $student)
     {
-        //
-        print("ici");;
+        $studentNom = $student->nom;
+        $student->delete();
+        return redirect()->route('student.index')->with('success', "L'etudiant" . $studentNom . 'a ete bien supprime');
     }
 }

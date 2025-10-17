@@ -24,7 +24,7 @@ class StudentFactory extends Factory
             'phone' => fake()->unique()->phoneNumber(),
             'address' => fake()->buildingNumber() . ' ' . fake()->streetName(),
             'birthday' => fake()->dateTimeBetween('-65 years', '-16 years'),
-            'city_id' => City::inRandomOrder()->first()->id ?? City::factory(),
+            'city_id' => City::inRandomOrder()->first()->id 
         ];
     }
 }
