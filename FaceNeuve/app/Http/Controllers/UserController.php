@@ -14,7 +14,10 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        $users = User::select()
+            ->orderby('name')
+            ->paginate(5);
+        return view('user.index', ["users" => $users]);
     }
 
     /**
@@ -33,7 +36,7 @@ class UserController extends Controller
     {
         $request->validate([
             'name' => 'required|regex:/^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/|max:80',
-            'email' => 'required|string|unique:users',
+            'email' => 'required|string|exists:students|unique:users',
             'password' => [
                 'required',
                 'confirmed',
@@ -52,6 +55,7 @@ class UserController extends Controller
         // print("<pre>");
         // print_r($user->toArray());
         // print("</pre>");
+        return redirect('user.index');
     }
 
     /**
