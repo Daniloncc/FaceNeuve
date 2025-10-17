@@ -30,6 +30,8 @@ Route::post("/create/student", [StudentController::class, 'store'])->name('stude
 Route::get("/index/student", [StudentController::class, 'index'])->name('student.index');
 Route::delete("/student/{student}", [StudentController::class, 'destroy'])->name('student.destroy');
 
+// User
+Route::get('/users', [UserController::class, 'index'])->name('user.index');
 
 // Connection 
 Route::get('/login', [AuthController::class, 'index'])->name('login');
