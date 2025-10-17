@@ -76,8 +76,6 @@ class StudentController extends Controller
      */
     public function show(Student $student)
     {
-
-
         return view('student.show', ['student' => $student]);
 
         //
@@ -134,8 +132,14 @@ class StudentController extends Controller
      */
     public function destroy(Student $student)
     {
-        $studentNom = $student->nom;
+        // print("<pre>");
+        // print_r($student->toArray());
+        // print("</pre>");
+        $studentFirstName = $student->firstname;
+        $studentName = $student->name;
+
         $student->delete();
-        return redirect()->route('student.index')->with('success', "L'etudiant" . $studentNom . 'a ete bien supprime');
+
+        return redirect()->route('student.index')->with('message', "L'etudiant " . $studentFirstName . " " . $studentName . 'a ete bien supprime');
     }
 }
