@@ -32,6 +32,7 @@ Route::delete("/student/{student}", [StudentController::class, 'destroy'])->name
 
 // User
 Route::get('/users', [UserController::class, 'index'])->name('user.index');
+Route::get('/registration', [UserController::class, 'create'])->name('user.create');
 
 // Connection 
 Route::get('/login', [AuthController::class, 'index'])->name('login');
