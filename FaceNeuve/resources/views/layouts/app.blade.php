@@ -40,7 +40,7 @@
                 <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
                     <li class="nav-item"><a class="nav-link me-lg-3" href="{{ route('student.create') }}">Ajouter un Etudiant</a></li>
                     <li class="nav-item"><a class="nav-link me-lg-3" href="{{ route('student.index') }}">Etudiants</a></li>
-                    <li class="nav-item"><a class="nav-link me-lg-3" href="#download">Messages</a></li>
+                    <li class="nav-item"><a class="nav-link me-lg-3" href="{{ route('user.index') }}">Utilisateurs</a></li>
                     <li class="nav-item"><a class="nav-link me-lg-3" href="#download">Messages</a></li>
                     <li class="nav-item"><a class="nav-link me-lg-3" href="{{ route('user.create') }}">S'inscrire</a></li>
                 </ul>

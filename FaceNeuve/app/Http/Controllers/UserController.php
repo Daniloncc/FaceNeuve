@@ -45,9 +45,6 @@ class UserController extends Controller
                     ->letters()->mixedCase()->numbers()->max(20)
             ],
         ]);
-        // print("<pre>");
-        // print_r($request->password);
-        // print("</pre>");
         $user = new User;
         $user->fill($request->except('password')); // Remplir SAUF password
         $user->password = Hash::make($request->password); // Puis assigner le password hashé
@@ -55,7 +52,7 @@ class UserController extends Controller
         // print("<pre>");
         // print_r($user->toArray());
         // print("</pre>");
-        return redirect('user.index');
+        return redirect('auth.index')->with('message', 'Utilisateur cree avec success');
     }
 
     /**
