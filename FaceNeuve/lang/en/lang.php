@@ -6,6 +6,7 @@ return [
     'text_header_students' => "Students",
     'text_header_edit' => "Edit student",
     'text_header_users' => 'Users',
+    'text_header_user' => 'User',
     'text_header_users_create' => 'Create user',
     'text_header_login' => 'Login',
 
@@ -54,13 +55,16 @@ return [
     'title_users_create' => 'New User Registration',
     'subtitle_users_create' => 'Fill out the form below to create an account and access all our features.',
 
+    // HEADER PAGE SHOW 
+    'title_users_show' => 'User :',
+
     // AUTH - PAGE LOGIN
     'title_login' => 'Login',
     'subtitle_login' => 'Enter your credentials to access your personal space:',
 
     // MODAL
     'title_modal' => 'Confirmation',
-    'subtitle_modal' => 'Are you sure you want to delete this student?',
+    'subtitle_modal' => 'Are you sure you want to delete ?',
     'annuler_modal' => 'Cancel',
 
     // WELCOME
@@ -136,4 +140,5 @@ return [
 
     // MESSAGES
     'error_password' => 'Wrong password !',
+    'welcome_text_connection' => 'You are successfully logged in!',
 ];

@@ -6,6 +6,7 @@ return [
     'text_header_students' => "Étudiants",
     'text_header_edit' => "Éditer étudiant",
     'text_header_users' => 'Utilisateurs',
+    'text_header_user' => 'Utilisateur',
     'text_header_users_create' => 'Creer utilisateur',
     'text_header_login' => 'Connexion',
 
@@ -54,6 +55,8 @@ return [
     'title_users_create' => 'Inscription d’un nouvel utilisateur',
     'subtitle_users_create' => 'Remplissez le formulaire ci-dessous pour créer une compte et accéder à toutes nos fonctionnalités.',
 
+    // HEADER PAGE SHOW 
+    'title_users_show' => 'Utilisateur :',
 
     // AUTH - PAGE LOGIN
     'title_login' => 'Connectez-vous à votre compte',
@@ -61,7 +64,7 @@ return [
 
     // MODAL
     'title_modal' => 'Confirmation',
-    'subtitle_modal' => 'Êtes-vous sûr de vouloir supprimer cet élève ?',
+    'subtitle_modal' => 'Êtes-vous sûr de vouloir supprimer ?',
     'annuler_modal' => 'Annuler',
 
     // WELCOME
@@ -105,7 +108,6 @@ return [
     'download_google_play' => "assets/img/google-play-badge.svg",
     'download_app_store' => "assets/img/app-store-badge.svg",
 
-
     // FORMULAIRE -- HEADER
     'title_form' => 'Inscrire un élève',
     'subtitle_form' => 'Fournissez les informations nécessaires pour créer un compte :',
@@ -131,14 +133,13 @@ return [
     'password_conf_label' => 'Confirmer le mot de passe :',
 
     // FOOTER
-
     'rights' => 'Tous droits réservés.',
     'privacy' => 'Confidentialité',
     'terms' => 'Conditions d’utilisation',
     'faq' => 'FAQ',
 
-
     // MESSAGES
     'error_password' => 'Mot de passe invalide !',
+    'welcome_text_connection' => 'Vous etes bien connecte !',
 
 ];

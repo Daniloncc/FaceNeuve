@@ -78,7 +78,6 @@
         </div>
     </nav>
 
-
     @if(session('message'))
     <div class="container col-lg-6 col-md-6 col-sm-8 bg-success mt-5 rounded d-flex justify-content-center align-items-center">
         <p class="text-white my-2">{{session('message')}}</p>
