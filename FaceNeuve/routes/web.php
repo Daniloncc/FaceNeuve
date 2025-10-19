@@ -20,15 +20,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Eleve/Student
-Route::get("/create/student", [StudentController::class, 'create'])->name('student.create');
-Route::get("/create/student", [StudentController::class, 'create'])->name('student.create');
-Route::get("/edit/student/{student}", [StudentController::class, 'edit'])->name('student.edit');
-Route::get("/show/student/{student}", [StudentController::class, 'show'])->name('student.show');
-Route::put("/edit/student/{student}", [StudentController::class, 'update'])->name('student.update');
-Route::post("/create/student", [StudentController::class, 'store'])->name('student.store');
-Route::get("/index/student", [StudentController::class, 'index'])->name('student.index');
-Route::delete("/student/{student}", [StudentController::class, 'destroy'])->name('student.destroy');
+// Eleve/Student on peux les vois juste si on est connecte
+Route::middleware('auth')->group(function () {
+    Route::get("/create/student", [StudentController::class, 'create'])->name('student.create');
+    Route::get("/create/student", [StudentController::class, 'create'])->name('student.create');
+    Route::get("/edit/student/{student}", [StudentController::class, 'edit'])->name('student.edit');
+    Route::get("/show/student/{student}", [StudentController::class, 'show'])->name('student.show');
+    Route::put("/edit/student/{student}", [StudentController::class, 'update'])->name('student.update');
+    Route::post("/create/student", [StudentController::class, 'store'])->name('student.store');
+    Route::get("/index/student", [StudentController::class, 'index'])->name('student.index');
+    Route::delete("/student/{student}", [StudentController::class, 'destroy'])->name('student.destroy');
+});
 
 // User
 Route::get('/users', [UserController::class, 'index'])->name('user.index');
@@ -36,6 +38,7 @@ Route::get('/registration', [UserController::class, 'create'])->name('user.creat
 Route::post('/registration', [UserController::class, 'store'])->name('user.store');
 Route::get('/user/{user}', [UserController::class, 'show'])->name('user.show');
 Route::get('/edit/user/{user}', [UserController::class, 'edit'])->name('user.edit');
+
 // Connection 
 Route::get('/login', [AuthController::class, 'index'])->name('login');
 Route::post('/login', [AuthController::class, 'store'])->name('login.store');

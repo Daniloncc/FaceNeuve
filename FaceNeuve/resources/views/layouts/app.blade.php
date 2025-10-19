@@ -38,18 +38,41 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+                    @auth
                     <li class="nav-item"><a class="nav-link me-lg-3" href="{{ route('student.create') }}">Ajouter un Etudiant</a></li>
                     <li class="nav-item"><a class="nav-link me-lg-3" href="{{ route('student.index') }}">Etudiants</a></li>
                     <li class="nav-item"><a class="nav-link me-lg-3" href="{{ route('user.index') }}">Utilisateurs</a></li>
+                    @endauth
                     <li class="nav-item"><a class="nav-link me-lg-3" href="#download">Messages</a></li>
+                    @guest
                     <li class="nav-item"><a class="nav-link me-lg-3" href="{{ route('user.create') }}">S'inscrire</a></li>
+                    @endguest
+                    <div class="dropdown">
+                        <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Langue
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item " href="#">Francais</a></li>
+                            <li><a class="dropdown-item" href="#">Anglais</a></li>
+                        </ul>
+                    </div>
                 </ul>
+                @guest
                 <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
                     <span class="d-flex align-items-center">
                         <i class="bi-chat-text-fill me-2"></i>
                         <a class="nav-link me-lg-3" href="{{ route('login') }}">Connexion</a>
                     </span>
                 </button>
+                @endguest
+                @auth
+                <button class="btn btn-danger rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+                    <span class="d-flex align-items-center">
+                        <i class="bi-chat-text-fill me-2"></i>
+                        <a class="nav-link me-lg-3" href="{{ route('logout') }}">Deconnecter</a>
+                    </span>
+                </button>
+                @endauth
             </div>
         </div>
     </nav>

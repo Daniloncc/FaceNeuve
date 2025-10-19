@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rules\Password;
@@ -9,6 +10,12 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
+
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      */
@@ -46,8 +53,8 @@ class UserController extends Controller
             ],
         ]);
         $user = new User;
-        $user->fill($request->except('password')); // Remplir SAUF password
-        $user->password = Hash::make($request->password); // Puis assigner le password hashé
+        $user->fill($request->except('password'));
+        $user->password = Hash::make($request->password);
         $user->save();
         // print("<pre>");
         // print_r($user->toArray());
