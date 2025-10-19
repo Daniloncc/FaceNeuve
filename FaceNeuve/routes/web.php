@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\SetLocaleController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -43,3 +44,6 @@ Route::get('/edit/user/{user}', [UserController::class, 'edit'])->name('user.edi
 Route::get('/login', [AuthController::class, 'index'])->name('login');
 Route::post('/login', [AuthController::class, 'store'])->name('login.store');
 Route::get('/logout', [AuthController::class, 'destroy'])->name('logout');
+
+// Definition de langue
+Route::get('/lang/{locale}', [SetLocaleController::class, 'index'])->name('lang');

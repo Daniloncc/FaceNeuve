@@ -52,8 +52,8 @@
                             Langue <span class="text-primary"> (Fr)</span>
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item " href="#">Francais</a></li>
-                            <li><a class="dropdown-item" href="#">Anglais</a></li>
+                            <li><a class="dropdown-item " href="{{ route('lang', 'fr') }}">Francais</a></li>
+                            <li><a class="dropdown-item" href="{{ route('lang', 'en') }}">Anglais</a></li>
                         </ul>
                     </div>
                 </ul>
