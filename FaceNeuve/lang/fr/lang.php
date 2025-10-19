@@ -6,6 +6,7 @@ return [
     'text_header_students' => "Étudiants",
     'text_header_edit' => "Éditer étudiant",
     'text_header_users' => 'Utilisateurs',
+    'text_header_users_create' => 'Creer utilisateur',
 
     // MENU
     'menu' => 'Menu',
@@ -46,7 +47,11 @@ return [
     // HEADER PAGE INDEX
     'title_users' => 'Nos utilisateurs',
     'subtitle_users' => 'Les utilisateurs inscrits sur la plateforme :',
- 
+
+    // HEADER PAGE CREATE
+    'title_users_create' => 'Inscription d’un nouvel utilisateur',
+    'subtitle_users_create' => 'Remplissez le formulaire ci-dessous pour créer une compte et accéder à toutes nos fonctionnalités.',
+
     // MODAL
     'title_modal' => 'Confirmation',
     'subtitle_modal' => 'Êtes-vous sûr de vouloir supprimer cet élève ?',
@@ -95,14 +100,12 @@ return [
 
 
     // FORMULAIRE -- HEADER
-
     'title_form' => 'Inscrire un élève',
     'subtitle_form' => 'Fournissez les informations nécessaires pour créer un compte :',
 
     // FORMULAIRE -- FORM
-
     'firstname_label' => 'Prénom :',
-    'firstname_placeholder' => 'Ton prénom',
+    'firstname_placeholder' => 'Ton prénom *',
     'lastname_label' => 'Nom :',
     'lastname_placeholder' => 'Ton nom *',
     'email_label' => 'Courriel :',
@@ -115,6 +118,10 @@ return [
     'city_label' => 'Ville :',
     'city_placeholder' => 'Choisissez la ville',
     'form_button' => 'Sauvegarder',
+
+    'password_label' => 'Mot de passe :',
+    'password_text' => 'Le mot de passe doit contenir des lettres (majuscules et minuscules) ainsi que des chiffres.',
+    'password_conf_label' => 'Confirmer le mot de passe :',
 
     // FOOTER
 

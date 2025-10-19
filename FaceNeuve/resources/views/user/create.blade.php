@@ -1,13 +1,13 @@
 @extends('layouts.app')
-@section('title', 'text_header_user_create')
+@section('title', trans('lang.text_header_users_create'))
 @section('content')
 
 <section class="page-section" id="contact">
     <div class="container">
         <div class="text-center">
-            <h2 class="section-heading text-uppercase">Inscription d’un nouvel utilisateur</h2>
+            <h2 class="section-heading text-uppercase">@lang('lang.title_users_create')</h2>
             <h3 class="section-subheading text-muted">
-                Remplissez le formulaire ci-dessous pour créer une compte et accéder à toutes nos fonctionnalités.
+                @lang('lang.subtitle_users_create')
             </h3>
         </div>
         <form id="contactForm" class="mt-5" method="post">
@@ -16,24 +16,24 @@
                 <div class="col-md-6 mx-auto d-flex flex-column gap-3">
                     <div class="form-group">
                         <!-- Nom input-->
-                        <label for="name">Nom complet :</label>
-                        <input class="form-control" id="name" name="name" type="text" placeholder="Ton nom complet " value="{{ old('name') }}" />
+                        <label for="name">@lang('lang.firstname_label')</label>
+                        <input class="form-control" id="name" name="name" type="text" placeholder="{{ trans('lang.firstname_placeholder') }}" value="{{ old('name') }}" />
                         @if($errors->has('name'))
                         <div class="text-danger mt-2">{{ $errors->first('name') }}</div>
                         @endif
                     </div>
                     <div class="form-group">
                         <!-- Email address input-->
-                        <label for="courriel">Nom de l'utilisateur :</label>
-                        <input class="form-control" id="email" type="email" name="email" placeholder="Ton courriel " value="{{ old('email') }}" />
+                        <label for="courriel">@lang('lang.email_label')</label>
+                        <input class="form-control" id="email" type="email" name="email" placeholder="{{ trans('lang.email_placeholder') }}" value="{{ old('email') }}" />
                         @if($errors->has('email'))
                         <div class="text-danger mt-2">{{ $errors->first('email') }}</div>
                         @endif
                     </div>
                     <div class="form-group">
                         <!-- Password password input-->
-                        <label for="courriel">Mot de passe :</label>
-                        <div class="text-primary mt-2">Le mot de passe doit contenir lettres(Majuscule et minuscule) et chiffres</div>
+                        <label for="password">@lang('lang.password_label')</label>
+                        <div class="text-primary mt-2">@lang('lang.password_text')</div>
                         <input class="form-control" id="password" type="password" name="password" pattern="^[A-Za-z0-9]{6,20}$" value="{{ old('password') }}" />
 
                         @if($errors->has('password'))
@@ -42,7 +42,7 @@
                     </div>
                     <div class="form-group">
                         <!-- Password password input-->
-                        <label for="courriel">Confirmer mot de passe :</label>
+                        <label for="password_confirmation">@lang('lang.password_conf_label')</label>
                         <input class="form-control" id="password_confirmation" type="password" name="password_confirmation" pattern="^[A-Za-z0-9]{6,20}$" value="{{ old('password') }}" />
                     </div>
                 </div>

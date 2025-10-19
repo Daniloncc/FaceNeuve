@@ -12,10 +12,10 @@ class UserController extends Controller
 {
 
 
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
     /**
      * Display a listing of the resource.
      */
@@ -59,7 +59,7 @@ class UserController extends Controller
         // print("<pre>");
         // print_r($user->toArray());
         // print("</pre>");
-        return redirect('auth.index')->with('message', 'Utilisateur cree avec success');
+        return redirect('login')->with('message', 'Utilisateur cree avec success');
     }
 
     /**

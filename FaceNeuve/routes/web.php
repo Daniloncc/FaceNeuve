@@ -34,11 +34,13 @@ Route::middleware('auth')->group(function () {
 });
 
 // User
+Route::middleware('auth')->group(function () {
 Route::get('/users', [UserController::class, 'index'])->name('user.index');
-Route::get('/registration', [UserController::class, 'create'])->name('user.create');
-Route::post('/registration', [UserController::class, 'store'])->name('user.store');
 Route::get('/user/{user}', [UserController::class, 'show'])->name('user.show');
 Route::get('/edit/user/{user}', [UserController::class, 'edit'])->name('user.edit');
+});
+Route::get('/registration', [UserController::class, 'create'])->name('user.create');
+Route::post('/registration', [UserController::class, 'store'])->name('user.store');
 
 // Connection 
 Route::get('/login', [AuthController::class, 'index'])->name('login');

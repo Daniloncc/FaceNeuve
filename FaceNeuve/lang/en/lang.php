@@ -6,6 +6,8 @@ return [
     'text_header_students' => "Students",
     'text_header_edit' => "Edit student",
     'text_header_users' => 'Users',
+    'text_header_users_create' => 'Create user',
+
 
     // MENU
     'menu' => 'Menu',
@@ -47,6 +49,10 @@ return [
     'title_users' => 'Our Users',
     'subtitle_users' => 'The users registered on the platform:',
 
+    // HEADER PAGE CREATE
+    'title_users_create' => 'New User Registration',
+    'subtitle_users_create' => 'Fill out the form below to create an account and access all our features.',
+
     // MODAL
     'title_modal' => 'Confirmation',
     'subtitle_modal' => 'Are you sure you want to delete this student?',
@@ -66,6 +72,7 @@ return [
     'section_students_title' => "What students are saying",
     'section_students_subtitle' => "Their thoughts on the FaceNeuve experience",
 
+    // Témoignages individuels
     'testimonial_1_name' => "Camille R.",
     'testimonial_1_text' => '"FaceNeuve helped me better organize my classes and collaborate easily with my classmates."',
 
@@ -78,6 +85,7 @@ return [
     'testimonial_4_name' => "David P.",
     'testimonial_4_text' => '"A real student community! I feel supported and motivated to improve every day."',
 
+    // Texte de conclusion
     'students_paragraph' => "Students using FaceNeuve share their opinions: simplicity, mutual help, and motivation. Discover their testimonials and see how FaceNeuve transforms their way of learning and collaborating.",
 
     // --- SECTION: Discover ---
@@ -92,14 +100,12 @@ return [
     'download_app_store' => "assets/img/app-store-badge.svg",
 
     // FORMULAIRE -- HEADER
-
     'title_form' => 'Register a Student',
     'subtitle_form' => 'Provide the required information to create an account:',
 
     // FORMULAIRE -- FORM
-
     'firstname_label' => 'First name:',
-    'firstname_placeholder' => 'Your first name',
+    'firstname_placeholder' => 'Your first name *',
     'lastname_label' => 'Last name:',
     'lastname_placeholder' => 'Your last name *',
     'email_label' => 'Email:',
@@ -112,6 +118,10 @@ return [
     'city_label' => 'City:',
     'city_placeholder' => 'Choose a city',
     'form_button' => 'Register',
+
+    'password_label' => 'Password:',
+    'password_text' => 'The password must contain letters (uppercase and lowercase) and numbers.',
+    'password_conf_label' => 'Confirm Password:',
 
     // FOOTER
     'rights' => 'All rights reserved.',

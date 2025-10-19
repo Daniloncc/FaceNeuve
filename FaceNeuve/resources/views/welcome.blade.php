@@ -13,8 +13,8 @@
                         @lang('lang.header_paragraph')
                     </p>
                     <div class="d-flex flex-column flex-lg-row align-items-center">
-                        <a class="btn btn-primary btn-lg me-lg-3 mb-4 mb-lg-0" href="#inscription">@lang('lang.header_btn_register')</a>
-                        <a class="btn btn-outline-dark btn-lg" href="#connexion">@lang('lang.header_btn_login')</a>
+                        <a class="btn btn-primary btn-lg me-lg-3 mb-4 mb-lg-0" href="{{ route('user.create') }}">@lang('lang.header_btn_register')</a>
+                        <a class="btn btn-outline-dark btn-lg" href="{{ route('login') }}">@lang('lang.header_btn_login')</a>
                     </div>
                 </div>
             </div>
@@ -125,7 +125,7 @@
                 <p class="lead fw-normal text-muted mb-5 mb-lg-0">
                     @lang('lang.discover_paragraph')
                 </p>
-                <a class="btn btn-outline-dark py-3 px-4 rounded-pill mt-5" href="{{ route('login') }}" target="_blank">@lang('lang.discover_btn')</a>
+                <a class="btn btn-outline-dark py-3 px-4 rounded-pill mt-5" href="{{ route('login') }}">@lang('lang.discover_btn')</a>
             </div>
             <!-- ">Connexion</a> -->
             <div class="col-sm-8 col-md-6">
