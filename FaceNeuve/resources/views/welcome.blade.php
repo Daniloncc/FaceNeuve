@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Bienvenue')
+@section('title', trans('lang.text_header_welcome'))
 @section('content')
 <!-- Mashead header-->
 <header class="masthead">

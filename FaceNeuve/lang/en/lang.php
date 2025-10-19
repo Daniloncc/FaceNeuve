@@ -1,5 +1,9 @@
 <?php
 return [
+    // TITLE HEADER
+    'text_header_welcome' => "Welcome",
+    'text_header_student' => "Add a Student",
+    'text_header_students' => "Students",
 
     // MENU
     'menu' => 'Menu',
@@ -14,6 +18,14 @@ return [
     'english' => 'English',
     'login' => 'Log in',
     'logout' => 'Log out',
+
+    // HEADER PAGE STUDENTS INDEX
+
+    'title_students' => 'Our Students',
+    'subtitle_students' => 'The students registered on the platform:',
+    'see_more' => 'More',
+
+    // WELCOME
 
     // --- HEADER ---
     'header_title' => "Welcome to FaceNeuve",

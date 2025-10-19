@@ -1,5 +1,10 @@
 <?php
 return [
+    // TITLE HEADER
+    'text_header_welcome' => "Bienvenu",
+    'text_header_student' => "Ajouter un étudiant",
+    'text_header_students' => "Étudiants",
+
     // MENU
     'menu' => 'Menu',
     'add_student' => 'Ajouter un étudiant',
@@ -14,6 +19,13 @@ return [
     'login' => 'Connexion',
     'logout' => 'Déconnexion',
 
+    // HEADER PAGE STUDENTS INDEX
+
+    'title_students' => 'Nos étudiants',
+    'subtitle_students' => 'Les étudiants inscrits sur la plateforme :',
+    'see_more' => 'Voir Plus',
+
+    // WELCOME
     // --- HEADER ---
     'header_title' => "Bienvenue sur FaceNeuve",
     'header_paragraph' => "La plateforme du Collège Maisonneuve pour rassembler les étudiants, partager des informations et bâtir une communauté dynamique.",
@@ -53,6 +65,7 @@ return [
     'download_title' => "Téléchargez l'application maintenant !",
     'download_google_play' => "assets/img/google-play-badge.svg",
     'download_app_store' => "assets/img/app-store-badge.svg",
+
 
     // FORMULAIRE -- HEADER
 

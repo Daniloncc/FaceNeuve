@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Nouveau eleve')
+@section('title', trans('lang.text_header_student'))
 @section('content')
 
 <section class="page-section" id="contact">
