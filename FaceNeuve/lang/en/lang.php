@@ -7,7 +7,7 @@ return [
     'text_header_edit' => "Edit student",
     'text_header_users' => 'Users',
     'text_header_users_create' => 'Create user',
-
+    'text_header_login' => 'Login',
 
     // MENU
     'menu' => 'Menu',
@@ -28,6 +28,7 @@ return [
     'button_edit' => 'Edit',
     'button_delete' => 'Delete',
     'button_update' => 'Update',
+    'button_login' => 'Login',
 
     // STUDENT 
 
@@ -52,6 +53,10 @@ return [
     // HEADER PAGE CREATE
     'title_users_create' => 'New User Registration',
     'subtitle_users_create' => 'Fill out the form below to create an account and access all our features.',
+
+    // AUTH - PAGE LOGIN
+    'title_login' => 'Login',
+    'subtitle_login' => 'Enter your credentials to access your personal space:',
 
     // MODAL
     'title_modal' => 'Confirmation',
@@ -128,4 +133,7 @@ return [
     'privacy' => 'Privacy Policy',
     'terms' => 'Terms of Use',
     'faq' => 'FAQ',
+
+    // MESSAGES
+    'error_password' => 'Wrong password !',
 ];

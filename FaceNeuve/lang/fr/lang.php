@@ -7,6 +7,7 @@ return [
     'text_header_edit' => "Éditer étudiant",
     'text_header_users' => 'Utilisateurs',
     'text_header_users_create' => 'Creer utilisateur',
+    'text_header_login' => 'Connexion',
 
     // MENU
     'menu' => 'Menu',
@@ -27,6 +28,7 @@ return [
     'button_edit' => 'Éditer',
     'button_delete' => 'Supprimer',
     'button_update' => 'Mettre à jour',
+    'button_login' => 'Connectez-vous',
 
     // STUDENT 
 
@@ -51,6 +53,11 @@ return [
     // HEADER PAGE CREATE
     'title_users_create' => 'Inscription d’un nouvel utilisateur',
     'subtitle_users_create' => 'Remplissez le formulaire ci-dessous pour créer une compte et accéder à toutes nos fonctionnalités.',
+
+
+    // AUTH - PAGE LOGIN
+    'title_login' => 'Connectez-vous à votre compte',
+    'subtitle_login' => 'Entrez vos identifiants pour accéder à votre espace personnel :',
 
     // MODAL
     'title_modal' => 'Confirmation',
@@ -129,5 +136,9 @@ return [
     'privacy' => 'Confidentialité',
     'terms' => 'Conditions d’utilisation',
     'faq' => 'FAQ',
+
+
+    // MESSAGES
+    'error_password' => 'Mot de passe invalide !',
 
 ];
