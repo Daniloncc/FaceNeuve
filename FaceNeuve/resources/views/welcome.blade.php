@@ -8,7 +8,7 @@
             <div class="col-lg-6">
                 <!-- Texte d'accueil -->
                 <div class="mb-5 mb-lg-0 text-center text-lg-start">
-                    <h1 class="display-1 lh-1 mb-3">Bienvenue sur FaceNeuve</h1>
+                    <h1 class="display-1 lh-1 mb-3">@lang('lang.header_title')</h1>
                     <p class="lead fw-normal text-muted mb-5">
                         La plateforme du Collège Maisonneuve pour rassembler les étudiants, partager des informations et bâtir une communauté dynamique.
                     </p>
