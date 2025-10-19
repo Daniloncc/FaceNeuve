@@ -4,6 +4,8 @@ return [
     'text_header_welcome' => "Welcome",
     'text_header_student' => "Add a Student",
     'text_header_students' => "Students",
+    'text_header_edit' => "Edit student",
+    'text_header_users' => 'Users',
 
     // MENU
     'menu' => 'Menu',
@@ -25,17 +27,25 @@ return [
     'button_delete' => 'Delete',
     'button_update' => 'Update',
 
-    // HEADER PAGE STUDENTS INDEX
+    // STUDENT 
+
+    // HEADER PAGE INDEX
     'title_students' => 'Our Students',
     'subtitle_students' => 'The students registered on the platform:',
     'see_more' => 'More',
 
-    // HEADER PAGE SHOW STUDENT
+    // HEADER PAGE SHOW 
     'title_student_show' => 'Student :',
 
-    // HEADER PAGE EDIT STUDENT
+    // HEADER PAGE EDIT 
     'title_student_edit' => 'Edit Student Profile',
     'subtitle_student_edit' => 'Update the account information:',
+
+    // USER
+
+    // HEADER PAGE INDEX
+    'title_users' => 'Our Users',
+    'subtitle_users' => 'The users registered on the platform:',
 
     // MODAL
     'title_modal' => 'Confirmation',
@@ -43,7 +53,6 @@ return [
     'annuler_modal' => 'Cancel',
 
     // WELCOME
-
     // --- HEADER ---
     'header_title' => "Welcome to FaceNeuve",
     'header_paragraph' => "The Collège Maisonneuve platform to connect students, share information, and build a dynamic community.",

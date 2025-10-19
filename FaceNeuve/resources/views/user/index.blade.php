@@ -1,20 +1,20 @@
 @extends('layouts.app')
-@section('title', 'Utilisateurs')
+@section('title', trans('lang.text_header_users'))
 @section('content')
 
 <section class="page-section" id="contact">
     <div class="container">
         <div>
-            <h2 class="section-heading text-uppercase">Nos utilisateurs</h2>
-            <h3 class="section-subheading text-muted">Les utilisateurs inscrits sur la plateforme :</h3>
+            <h2 class="section-heading text-uppercase">@lang('lang.title_users')</h2>
+            <h3 class="section-subheading text-muted">@lang('lang.subtitle_users')</h3>
         </div>
 
         <table class="container table table-striped mt-5">
             <thead>
                 <tr class="navbar-brand fs-3">
-                    <th scope="col">Nom</th>
-                    <th scope="col">Courriel</th>
-                    <th scope="col">Voir Plus</th>
+                    <th scope="col">@lang('lang.firstname_label')</th>
+                    <th scope="col">@lang('lang.email_label')</th>
+                    <th scope="col">@lang('lang.see_more')</th>
                 </tr>
             </thead>
             <tbody>

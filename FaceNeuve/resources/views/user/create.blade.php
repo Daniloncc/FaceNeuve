@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Inscription')
+@section('title', 'text_header_user_create')
 @section('content')
 
 <section class="page-section" id="contact">

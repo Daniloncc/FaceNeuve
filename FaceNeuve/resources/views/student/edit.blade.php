@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Editer etudiant')
+@section('title', trans('lang.text_header_edit'))
 @section('content')
 
 <section class="page-section mt-5" id="contact">

@@ -4,6 +4,8 @@ return [
     'text_header_welcome' => "Bienvenu",
     'text_header_student' => "Ajouter un étudiant",
     'text_header_students' => "Étudiants",
+    'text_header_edit' => "Éditer étudiant",
+    'text_header_users' => 'Utilisateurs',
 
     // MENU
     'menu' => 'Menu',
@@ -20,33 +22,36 @@ return [
     'logout' => 'Déconnexion',
 
     // BUTTON
-
     'button_back' => 'Retourner',
     'button_edit' => 'Éditer',
     'button_delete' => 'Supprimer',
     'button_update' => 'Mettre à jour',
 
-    // HEADER PAGE STUDENTS INDEX
+    // STUDENT 
 
+    // HEADER PAGE INDEX
     'title_students' => 'Nos étudiants',
     'subtitle_students' => 'Les étudiants inscrits sur la plateforme :',
     'see_more' => 'Voir Plus',
 
-    // HEADER PAGE SHOW STUDENT
-
+    // HEADER PAGE SHOW 
     'title_student_show' => 'Éleve :',
 
-    // HEADER PAGE EDIT STUDENT
-
+    // HEADER PAGE EDIT
     'title_student_edit' => 'Éditer le profil de l’étudiant',
     'subtitle_student_edit' => 'Modifiez les informations de cette compte :',
 
-    // MODAL
+    // USER
 
+    // HEADER PAGE INDEX
+    'title_users' => 'Nos utilisateurs',
+    'subtitle_users' => 'Les utilisateurs inscrits sur la plateforme :',
+ 
+    // MODAL
     'title_modal' => 'Confirmation',
     'subtitle_modal' => 'Êtes-vous sûr de vouloir supprimer cet élève ?',
     'annuler_modal' => 'Annuler',
- 
+
     // WELCOME
     // --- HEADER ---
     'header_title' => "Bienvenue sur FaceNeuve",
