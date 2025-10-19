@@ -1,11 +1,24 @@
 <?php
 return [
+    // MENU
+    'menu' => 'Menu',
+    'add_student' => 'Ajouter un étudiant',
+    'students' => 'Étudiants',
+    'users' => 'Utilisateurs',
+    'messages' => 'Messages',
+    'signup' => "S'inscrire",
+    'language' => 'Langue',
+    'language_short' => '(Fr)',
+    'french' => 'Français',
+    'english' => 'Anglais',
+    'login' => 'Connexion',
+    'logout' => 'Déconnexion',
+
     // --- HEADER ---
     'header_title' => "Bienvenue sur FaceNeuve",
     'header_paragraph' => "La plateforme du Collège Maisonneuve pour rassembler les étudiants, partager des informations et bâtir une communauté dynamique.",
     'header_btn_register' => "S'inscrire",
     'header_btn_login' => "Se connecter",
-    'header_video_src' => "assets/img/video/eleves.mp4",
 
     // --- ASIDE (Citation) ---
     'aside_quote' => '"FaceNeuve facilite la vie étudiante en centralisant l’information et en renforçant les liens entre les étudiants du Collège Maisonneuve."',

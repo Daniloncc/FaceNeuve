@@ -1,11 +1,25 @@
 <?php
 return [
+
+    // MENU
+    'menu' => 'Menu',
+    'add_student' => 'Add a Student',
+    'students' => 'Students',
+    'users' => 'Users',
+    'messages' => 'Messages',
+    'signup' => 'Sign up',
+    'language' => 'Language',
+    'language_short' => '(En)',
+    'french' => 'French',
+    'english' => 'English',
+    'login' => 'Log in',
+    'logout' => 'Log out',
+
     // --- HEADER ---
     'header_title' => "Welcome to FaceNeuve",
     'header_paragraph' => "The Collège Maisonneuve platform to connect students, share information, and build a dynamic community.",
     'header_btn_register' => "Sign up",
     'header_btn_login' => "Log in",
-    'header_video_src' => "assets/img/video/eleves.mp4",
 
     // --- ASIDE (Quote) ---
     'aside_quote' => '"FaceNeuve makes student life easier by centralizing information and strengthening connections between Maisonneuve students."',

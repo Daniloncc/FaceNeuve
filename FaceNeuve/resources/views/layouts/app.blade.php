@@ -33,27 +33,27 @@
         <div class="container px-5">
             <a class="navbar-brand" href="/"><img width="80px" height="80px" src="{{ asset('/assets/img/logo_faceneuve.png') }}" alt="Logo FaceNeuve"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                Menu
+                @lang('lang.menu')
                 <i class="bi-list"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
                     @auth
-                    <li class="nav-item"><a class="nav-link me-lg-3" href="{{ route('student.create') }}">Ajouter un Etudiant</a></li>
-                    <li class="nav-item"><a class="nav-link me-lg-3" href="{{ route('student.index') }}">Etudiants</a></li>
-                    <li class="nav-item"><a class="nav-link me-lg-3" href="{{ route('user.index') }}">Utilisateurs</a></li>
+                    <li class="nav-item"><a class="nav-link me-lg-3" href="{{ route('student.create') }}">@lang('lang.add_student')</a></li>
+                    <li class="nav-item"><a class="nav-link me-lg-3" href="{{ route('student.index') }}">@lang('lang.students')</a></li>
+                    <li class="nav-item"><a class="nav-link me-lg-3" href="{{ route('user.index') }}">@lang('lang.users')</a></li>
                     @endauth
-                    <li class="nav-item"><a class="nav-link me-lg-3" href="#download">Messages</a></li>
+                    <li class="nav-item"><a class="nav-link me-lg-3" href="#download">@lang('lang.messages')</a></li>
                     @guest
-                    <li class="nav-item"><a class="nav-link me-lg-3" href="{{ route('user.create') }}">S'inscrire</a></li>
+                    <li class="nav-item"><a class="nav-link me-lg-3" href="{{ route('user.create') }}">@lang('lang.signup')</a></li>
                     @endguest
                     <div class="dropdown">
                         <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Langue <span class="text-primary"> (Fr)</span>
+                            @lang('lang.language') <span class="text-primary"> (Fr)</span>
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item " href="{{ route('lang', 'fr') }}">Francais</a></li>
-                            <li><a class="dropdown-item" href="{{ route('lang', 'en') }}">Anglais</a></li>
+                            <li><a class="dropdown-item " href="{{ route('lang', 'fr') }}">@lang('lang.french')</a></li>
+                            <li><a class="dropdown-item" href="{{ route('lang', 'en') }}">@lang('lang.english')</a></li>
                         </ul>
                     </div>
                 </ul>
@@ -61,7 +61,7 @@
                 <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
                     <span class="d-flex align-items-center">
                         <i class="bi-chat-text-fill me-2"></i>
-                        <a class="nav-link me-lg-3" href="{{ route('login') }}">Connexion</a>
+                        <a class="nav-link me-lg-3" href="{{ route('login') }}">@lang('lang.login')</a>
                     </span>
                 </button>
                 @endguest
@@ -69,7 +69,7 @@
                 <button class="btn btn-danger rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
                     <span class="d-flex align-items-center">
                         <i class="bi-chat-text-fill me-2"></i>
-                        <a class="nav-link me-lg-3" href="{{ route('logout') }}">Deconnecter</a>
+                        <a class="nav-link me-lg-3" href="{{ route('logout') }}">@lang('lang.logout')</a>
                     </span>
                 </button>
                 @endauth

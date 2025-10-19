@@ -10,11 +10,11 @@
                 <div class="mb-5 mb-lg-0 text-center text-lg-start">
                     <h1 class="display-1 lh-1 mb-3">@lang('lang.header_title')</h1>
                     <p class="lead fw-normal text-muted mb-5">
-                        La plateforme du Collège Maisonneuve pour rassembler les étudiants, partager des informations et bâtir une communauté dynamique.
+                        @lang('lang.header_paragraph')
                     </p>
                     <div class="d-flex flex-column flex-lg-row align-items-center">
-                        <a class="btn btn-primary btn-lg me-lg-3 mb-4 mb-lg-0" href="#inscription">S'inscrire</a>
-                        <a class="btn btn-outline-dark btn-lg" href="#connexion">Se connecter</a>
+                        <a class="btn btn-primary btn-lg me-lg-3 mb-4 mb-lg-0" href="#inscription">@lang('lang.header_btn_register')</a>
+                        <a class="btn btn-outline-dark btn-lg" href="#connexion">@lang('lang.header_btn_login')</a>
                     </div>
                 </div>
             </div>
@@ -43,9 +43,8 @@
         <div class="row gx-5 justify-content-center">
             <div class="col-xl-8">
                 <div class="h2 fs-1 text-white mb-4">
-                    "FaceNeuve facilite la vie étudiante en centralisant l’information et en renforçant les liens entre les étudiants du Collège Maisonneuve."
+                    @lang('lang.aside_quote')
                 </div>
-                <!-- <img src="assets/img/maisonneuve-logo.png" alt="Collège Maisonneuve" style="height: 3rem" /> -->
             </div>
         </div>
     </div>
@@ -57,8 +56,8 @@
         <div class="row gx-5 align-items-center">
             <div class="col-lg-8 mb-5 mb-lg-0 mx-auto">
                 <div class="text-center mb-5">
-                    <h2 class="section-heading text-uppercase">Ce que disent les étudiants</h2>
-                    <h3 class="section-subheading text-primary">Leurs impressions sur l’expérience FaceNeuve</h3>
+                    <h2 class="section-heading text-uppercase">@lang('lang.section_students_title')</h2>
+                    <h3 class="section-subheading text-primary">@lang('lang.section_students_subtitle')</h3>
                 </div>
                 <div class="container-fluid px-5">
 
@@ -68,8 +67,8 @@
                             <div class="text-center">
                                 <img class="mx-auto rounded-circle" src="assets/img/team/2.jpg" height="150px" width="150px" alt="..." />
                                 <!-- <i class="bi-chat-dots icon-feature text-gradient d-block mb-3"></i> -->
-                                <h3 class="font-alt">Camille R.</h3>
-                                <p class="text-muted mb-0">"FaceNeuve m’a permis de mieux organiser mes cours et de collaborer facilement avec mes camarades."</p>
+                                <h3 class="font-alt">@lang('lang.testimonial_1_name')</h3>
+                                <p class="text-muted mb-0">@lang('lang.testimonial_1_text')</p>
                             </div>
                         </div>
 
@@ -78,8 +77,8 @@
                             <div class="text-center">
                                 <img class="mx-auto rounded-circle" src="assets/img/team/1.jpg" height="150px" width="150px" alt="..." />
                                 <!-- <i class="bi-person-circle icon-feature text-gradient d-block mb-3"></i> -->
-                                <h3 class="font-alt">Julien M.</h3>
-                                <p class="text-muted mb-0">"J’aime l’interface simple et intuitive, ça rend l’apprentissage beaucoup plus agréable."</p>
+                                <h3 class="font-alt">@lang('lang.testimonial_2_name')</h3>
+                                <p class="text-muted mb-0">@lang('lang.testimonial_2_text')</p>
                             </div>
                         </div>
                     </div>
@@ -89,8 +88,8 @@
                             <div class="text-center">
                                 <img class="mx-auto rounded-circle" src="assets/img/team/danilo.jpg" height="150px" width="150px" alt="..." />
                                 <!-- <i class="bi-lightbulb icon-feature text-gradient d-block mb-3"></i> -->
-                                <h3 class="font-alt">Danilo L.</h3>
-                                <p class="text-muted mb-0">"Grâce à FaceNeuve, j’ai pu trouver de nouvelles méthodes d’étude et partager des idées innovantes."</p>
+                                <h3 class="font-alt">@lang('lang.testimonial_3_name')</h3>
+                                <p class="text-muted mb-0">@lang('lang.testimonial_3_text')</p>
                             </div>
                         </div>
 
@@ -99,16 +98,15 @@
                             <div class="text-center">
                                 <img class="mx-auto rounded-circle" src="assets/img/team/3.jpg" height="150px" width="150px" alt="..." />
                                 <!-- <i class="bi-emoji-smile icon-feature text-gradient d-block mb-3"></i> -->
-                                <h3 class="font-alt">David P.</h3>
-                                <p class="text-muted mb-0">"Une vraie communauté d’étudiants! Je me sens soutenu et motivé à progresser chaque jour."</p>
+                                <h3 class="font-alt">@lang('lang.testimonial_4_name')</h3>
+                                <p class="text-muted mb-0">@lang('lang.testimonial_4_text')</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-12 mx-auto text-center mt-5">
                     <p class="large text-muted">
-                        Les étudiants qui utilisent FaceNeuve partagent leurs avis sur la plateforme : simplicité, entraide et motivation.
-                        Découvrez leurs témoignages et voyez comment FaceNeuve transforme leur manière d’apprendre et de collaborer.
+                        @lang('lang.students_paragraph')
                     </p>
                 </div>
             </div>
@@ -123,18 +121,16 @@
     <div class="container px-5">
         <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
             <div class="col-12 col-lg-5">
-                <h2 class="display-4 lh-1 mb-4">Découvrez FaceNeuve</h2>
+                <h2 class="display-4 lh-1 mb-4">@lang('lang.discover_title')</h2>
                 <p class="lead fw-normal text-muted mb-5 mb-lg-0">
-                    FaceNeuve est une plateforme pensée par et pour les étudiants.
-                    Elle facilite la collaboration, le partage de ressources et la création d’un réseau d’entraide.
-                    Que ce soit pour mieux comprendre un cours, trouver des idées innovantes ou simplement rester motivé,
-                    FaceNeuve vous accompagne dans votre parcours académique.
+                    @lang('lang.discover_paragraph')
                 </p>
-                <a class="btn btn-outline-dark py-3 px-4 rounded-pill mt-5" href="https://startbootstrap.com/theme/new-age" target="_blank">Se connecter</a>
+                <a class="btn btn-outline-dark py-3 px-4 rounded-pill mt-5" href="{{ route('login') }}" target="_blank">@lang('lang.discover_btn')</a>
             </div>
+            <!-- ">Connexion</a> -->
             <div class="col-sm-8 col-md-6">
                 <div class="px-5 px-sm-0">
-                    <img class="img-fluid rounded-circle" src="/assets/img/eleves.jpg" alt="Étudiants qui discutent au corridor" />
+                    <img class="img-fluid rounded-circle" src="/assets/img/eleves.jpg" alt="Étudiants" />
                 </div>
             </div>
         </div>
@@ -145,7 +141,7 @@
 <section class="bg-img" id="download">
     <div class="container px-5">
         <h2 class="text-center text-white font-alt mb-4">
-            Téléchargez l'application maintenant !</h2>
+            @lang('lang.download_title')</h2>
         <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center">
             <a class="me-lg-3 mb-4 mb-lg-0" href="#!"><img class="app-badge" src="assets/img/google-play-badge.svg" alt="..." /></a>
             <a href="#!"><img class="app-badge" src="assets/img/app-store-badge.svg" alt="..." /></a>
