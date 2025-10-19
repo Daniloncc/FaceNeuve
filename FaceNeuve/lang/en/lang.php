@@ -19,11 +19,28 @@ return [
     'login' => 'Log in',
     'logout' => 'Log out',
 
-    // HEADER PAGE STUDENTS INDEX
+    // BUTTON
+    'button_back' => 'Back',
+    'button_edit' => 'Edit',
+    'button_delete' => 'Delete',
+    'button_update' => 'Update',
 
+    // HEADER PAGE STUDENTS INDEX
     'title_students' => 'Our Students',
     'subtitle_students' => 'The students registered on the platform:',
     'see_more' => 'More',
+
+    // HEADER PAGE SHOW STUDENT
+    'title_student_show' => 'Student :',
+
+    // HEADER PAGE EDIT STUDENT
+    'title_student_edit' => 'Edit Student Profile',
+    'subtitle_student_edit' => 'Update the account information:',
+
+    // MODAL
+    'title_modal' => 'Confirmation',
+    'subtitle_modal' => 'Are you sure you want to delete this student?',
+    'annuler_modal' => 'Cancel',
 
     // WELCOME
 
@@ -88,7 +105,6 @@ return [
     'form_button' => 'Register',
 
     // FOOTER
-
     'rights' => 'All rights reserved.',
     'privacy' => 'Privacy Policy',
     'terms' => 'Terms of Use',

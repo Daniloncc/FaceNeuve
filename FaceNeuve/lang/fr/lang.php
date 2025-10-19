@@ -19,12 +19,34 @@ return [
     'login' => 'Connexion',
     'logout' => 'Déconnexion',
 
+    // BUTTON
+
+    'button_back' => 'Retourner',
+    'button_edit' => 'Éditer',
+    'button_delete' => 'Supprimer',
+    'button_update' => 'Mettre à jour',
+
     // HEADER PAGE STUDENTS INDEX
 
     'title_students' => 'Nos étudiants',
     'subtitle_students' => 'Les étudiants inscrits sur la plateforme :',
     'see_more' => 'Voir Plus',
 
+    // HEADER PAGE SHOW STUDENT
+
+    'title_student_show' => 'Éleve :',
+
+    // HEADER PAGE EDIT STUDENT
+
+    'title_student_edit' => 'Éditer le profil de l’étudiant',
+    'subtitle_student_edit' => 'Modifiez les informations de cette compte :',
+
+    // MODAL
+
+    'title_modal' => 'Confirmation',
+    'subtitle_modal' => 'Êtes-vous sûr de vouloir supprimer cet élève ?',
+    'annuler_modal' => 'Annuler',
+ 
     // WELCOME
     // --- HEADER ---
     'header_title' => "Bienvenue sur FaceNeuve",

@@ -28,6 +28,7 @@
 </head>
 
 <body id="page-top" class="d-flex flex-column min-vh-100">
+    @php $locale = session()->get('locale') @endphp
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm" id="mainNav">
         <div class="container px-5">
@@ -49,7 +50,7 @@
                     @endguest
                     <div class="dropdown">
                         <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            @lang('lang.language') <span class="text-primary"> (Fr)</span>
+                            @lang('lang.language') <span class="text-primary"> {{ $locale == '' ? '(fr)' : "($locale)" }}</span>
                         </button>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item " href="{{ route('lang', 'fr') }}">@lang('lang.french')</a></li>
