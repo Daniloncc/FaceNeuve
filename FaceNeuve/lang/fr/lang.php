@@ -53,4 +53,34 @@ return [
     'download_title' => "Téléchargez l'application maintenant !",
     'download_google_play' => "assets/img/google-play-badge.svg",
     'download_app_store' => "assets/img/app-store-badge.svg",
+
+    // FORMULAIRE -- HEADER
+
+    'title_form' => 'Inscrire un élève',
+    'subtitle_form' => 'Fournissez les informations nécessaires pour créer un compte :',
+
+    // FORMULAIRE -- FORM
+
+    'firstname_label' => 'Prénom :',
+    'firstname_placeholder' => 'Ton prénom',
+    'lastname_label' => 'Nom :',
+    'lastname_placeholder' => 'Ton nom *',
+    'email_label' => 'Courriel :',
+    'email_placeholder' => 'Ton courriel *',
+    'phone_label' => 'Téléphone :',
+    'phone_placeholder' => 'Format : XXXXXXXXXX',
+    'address_label' => 'Adresse :',
+    'address_placeholder' => 'Ton adresse *',
+    'birthday_label' => 'Date de naissance :',
+    'city_label' => 'Ville :',
+    'city_placeholder' => 'Choisissez la ville',
+    'form_button' => 'Sauvegarder',
+
+    // FOOTER
+
+    'rights' => 'Tous droits réservés.',
+    'privacy' => 'Confidentialité',
+    'terms' => 'Conditions d’utilisation',
+    'faq' => 'FAQ',
+
 ];

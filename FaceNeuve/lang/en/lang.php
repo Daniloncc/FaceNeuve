@@ -52,4 +52,33 @@ return [
     'download_title' => "Download the app now!",
     'download_google_play' => "assets/img/google-play-badge.svg",
     'download_app_store' => "assets/img/app-store-badge.svg",
+
+    // FORMULAIRE -- HEADER
+
+    'title_form' => 'Register a Student',
+    'subtitle_form' => 'Provide the required information to create an account:',
+
+    // FORMULAIRE -- FORM
+
+    'firstname_label' => 'First name:',
+    'firstname_placeholder' => 'Your first name',
+    'lastname_label' => 'Last name:',
+    'lastname_placeholder' => 'Your last name *',
+    'email_label' => 'Email:',
+    'email_placeholder' => 'Your email *',
+    'phone_label' => 'Phone:',
+    'phone_placeholder' => 'Format: XXXXXXXXXX',
+    'address_label' => 'Address:',
+    'address_placeholder' => 'Your address *',
+    'birthday_label' => 'Date of birth:',
+    'city_label' => 'City:',
+    'city_placeholder' => 'Choose a city',
+    'form_button' => 'Register',
+
+    // FOOTER
+
+    'rights' => 'All rights reserved.',
+    'privacy' => 'Privacy Policy',
+    'terms' => 'Terms of Use',
+    'faq' => 'FAQ',
 ];

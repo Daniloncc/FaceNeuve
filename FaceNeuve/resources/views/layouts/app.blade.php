@@ -95,12 +95,12 @@
                 <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             </div>
             <div class="text-white-50 small mt-2">
-                <div class="mb-2">&copy; Danilo Costa {{ date('Y') }}. All Rights Reserved.</div>
-                <a href="#!">Privacy</a>
+                <div class="mb-2">&copy; Danilo Costa {{ date('Y') }}. @lang('lang.rights')</div>
+                <a href="#!">@lang('lang.privacy')</a>
                 <span class="mx-1">&middot;</span>
-                <a href="#!">Terms</a>
+                <a href="#!">@lang('lang.terms')</a>
                 <span class="mx-1">&middot;</span>
-                <a href="#!">FAQ</a>
+                <a href="#!">@lang('lang.faq')</a>
             </div>
         </div>
     </footer>
