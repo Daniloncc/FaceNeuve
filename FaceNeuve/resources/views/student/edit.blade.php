@@ -67,10 +67,11 @@
                         <lablel for="city_id">@lang('lang.city_label')</lablel>
                         <select name="city_id" id="city_id" class="form-control">
                             <option value="">@lang('lang.city_placeholder')</option>
-                            @foreach($cities as $city)
-                            <option value="{{ old('city_id', $student->city_id) }}"
-                                @if(old('city_id')==$city->id || (isset($student) && $student->city_id == $city->id)) selected @endif>
-                                {{ $city->city }}
+                            @foreach($cities as $cit)
+
+                            <option value="{{ $cit->id }}"
+                                @if(old('city_id')==$cit->id || (isset($student) && $student->city_id == $cit->id)) selected @endif>
+                                {{ $cit->city }}
                             </option>
                             @endforeach
                         </select>

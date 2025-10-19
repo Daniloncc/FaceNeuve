@@ -114,6 +114,10 @@ class StudentController extends Controller
             'city_id' => 'required|integer',
         ]);
 
+        // print("<pre>");
+        // print_r($request->toArray());
+        // print("</pre>");
+        // die;
         $student->update([
             'firstname' => $request->firstname,
             'name' => $request->name,
