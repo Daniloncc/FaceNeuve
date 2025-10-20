@@ -46,7 +46,7 @@ class AuthController extends Controller
         if ($request->email !== "marcos@gmail.com") {
             Auth::login($user);
             $student = Student::where('email', $user->email)->first();
-            return view('student.show', ['student' => $student]);
+            return redirect()->intended(route('student.show', ['student' => $student]));
         }
         // print("<pre>");
         // print_r($user->toArray());

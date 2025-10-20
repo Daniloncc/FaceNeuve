@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Student;
 use App\Models\City;
+use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class StudentController extends Controller
 {
@@ -127,6 +129,10 @@ class StudentController extends Controller
             'birthday' => $request->birthday,
             'city_id' => $request->city_id,
         ]);
+
+        if (Auth::id() !== 9) {
+            return redirect()->route('student.show', $student->id,)->with('message', "Profil mis à jour !");
+        }
         //
         return redirect()->route('student.index', $student->id,)->with('message', "L'élève " . $request->firstname . " " . $request->name . " a mis à jour !");
     }
@@ -136,14 +142,17 @@ class StudentController extends Controller
      */
     public function destroy(Student $student)
     {
-        // print("<pre>");
-        // print_r($student->toArray());
-        // print("</pre>");
-        $studentFirstName = $student->firstname;
-        $studentName = $student->name;
+        if (Auth::id() === 9) {
+            $studentFirstName = $student->firstname;
+            $studentName = $student->name;
+            // Supprimer Eleve
+            $student->delete();
 
-        $student->delete();
+            // Supprimer User
+            $user = User::where('email', $student->email)->first();
+            $user->delete();
 
-        return redirect()->route('student.index')->with('message', "L'etudiant " . $studentFirstName . " " . $studentName . 'a ete bien supprime');
+            return redirect()->route('student.index')->with('message', "L'etudiant " . $studentFirstName . " " . $studentName . ' a ete bien supprime');
+        }
     }
 }
