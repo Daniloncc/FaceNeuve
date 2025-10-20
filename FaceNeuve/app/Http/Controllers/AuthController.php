@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Student;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Auth;
@@ -39,9 +40,20 @@ class AuthController extends Controller
                 ->withErrors(trans('auth.failed'))
                 ->withInput();
         endif;
+
         $user = Auth::getProvider()->retrieveByCredentials($credentials);
+
+        if ($request->email !== "marcos@gmail.com") {
+            Auth::login($user);
+            $student = Student::where('email', $user->email)->first();
+            return view('student.show', ['student' => $student]);
+        }
+        // print("<pre>");
+        // print_r($user->toArray());
+        // print("</pre>");
+        // die;
         Auth::login($user);
-        return redirect()->intended(route('user.index', $request->id))->with('message', true);
+        return redirect()->intended(route('user.index'))->with('message', true);
     }
 
 

@@ -8,7 +8,6 @@
             <h2 class="section-heading text-uppercase">@lang('lang.title_users')</h2>
             <h3 class="section-subheading text-muted">@lang('lang.subtitle_users')</h3>
         </div>
-
         <table class="container table table-striped mt-5">
             <thead>
                 <tr class="navbar-brand fs-3">

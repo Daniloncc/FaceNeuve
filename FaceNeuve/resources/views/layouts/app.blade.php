@@ -39,11 +39,21 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+                    <!-- Connection Admin -->
                     @auth
+                    @if(auth()->id() == 9)
                     <li class="nav-item"><a class="nav-link me-lg-3" href="{{ route('student.create') }}">@lang('lang.add_student')</a></li>
                     <li class="nav-item"><a class="nav-link me-lg-3" href="{{ route('student.index') }}">@lang('lang.students')</a></li>
                     <li class="nav-item"><a class="nav-link me-lg-3" href="{{ route('user.index') }}">@lang('lang.users')</a></li>
+                    @endif
                     @endauth
+                    <!-- Connection Etudiant -->
+                    @auth
+                    @if(auth()->id() !== 9)
+                    <li class="nav-item"><a class="nav-link me-lg-3" href="{{ route('user.index') }}">Ajouter Forum</a></li>
+                    @endif
+                    @endauth
+                    <!-- General -->
                     <li class="nav-item"><a class="nav-link me-lg-3" href="#download">@lang('lang.messages')</a></li>
                     @guest
                     <li class="nav-item"><a class="nav-link me-lg-3" href="{{ route('user.create') }}">@lang('lang.signup')</a></li>
