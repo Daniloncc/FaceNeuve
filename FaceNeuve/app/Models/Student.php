@@ -24,4 +24,9 @@ class Student extends Model
         //cest pour faire une jointure, a chaque fois que jappelle la class 
         return $this->belongsTo(City::class);
     }
+
+    public function forum()
+    {
+        return $this->hasMany(Forum::class);
+    }
 }
