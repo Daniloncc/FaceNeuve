@@ -142,4 +142,14 @@ return [
     'error_password' => 'Mot de passe invalide !',
     'welcome_text_connection' => 'Vous etes bien connecte !',
 
+    // FORUM
+    'forum_titre' => 'Forum',
+    'forum_soustitre' => 'Écrivez ce que vous pensez :',
+
+    // FORMULAIRE -- FORM
+    'titre_label' => 'Titre :',
+    'titre_placeholder' => 'Le titre',
+    'description_label' => 'Description :',
+    'description_placeholder' => 'Votre message *',
+
 ];

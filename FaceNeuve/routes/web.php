@@ -2,9 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ForumController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\SetLocaleController;
+use App\Models\Forum;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,9 +38,9 @@ Route::middleware('auth')->group(function () {
 
 // User
 Route::middleware('auth')->group(function () {
-Route::get('/users', [UserController::class, 'index'])->name('user.index');
-Route::get('/user/{user}', [UserController::class, 'show'])->name('user.show');
-Route::get('/edit/user/{user}', [UserController::class, 'edit'])->name('user.edit');
+    Route::get('/users', [UserController::class, 'index'])->name('user.index');
+    Route::get('/user/{user}', [UserController::class, 'show'])->name('user.show');
+    Route::get('/edit/user/{user}', [UserController::class, 'edit'])->name('user.edit');
 });
 Route::get('/registration', [UserController::class, 'create'])->name('user.create');
 Route::post('/registration', [UserController::class, 'store'])->name('user.store');
@@ -49,3 +52,8 @@ Route::get('/logout', [AuthController::class, 'destroy'])->name('logout');
 
 // Definition de langue
 Route::get('/lang/{locale}', [SetLocaleController::class, 'index'])->name('lang');
+
+// Forum
+Route::middleware('auth')->group(function () {
+    Route::get("/create/forum", [ForumController::class, 'create'])->name('forum.create');
+});

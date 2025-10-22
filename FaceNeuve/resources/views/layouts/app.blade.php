@@ -66,7 +66,7 @@
                             <li><a class="dropdown-item" href="#">Messages</a></li>
                             <li><a class="dropdown-item" href="#">Materiel</a></li>
                             @auth
-                            <li><a class="dropdown-item" href="#">Ajouter message</a></li>
+                            <li><a class="dropdown-item" href="{{ route('forum.create') }}">Ajouter message</a></li>
                             <li><a class="dropdown-item" href="#">Ajouter materiel</a></li>
                             @endauth
                         </ul>
