@@ -14,16 +14,16 @@
                 <div class="col-md-6 mx-auto d-flex flex-column gap-3">
                     <div class="form-group">
                         <!-- Prenom input-->
-                        <label for="titre">@lang('lang.titre_label')</label>
-                        <input class="form-control" id="titre" name="titre" type="text" placeholder="{{ trans('lang.titre_placeholder') }}" value="{{ old('titre') }}" />
+                        <label for="title">@lang('lang.titre_label')</label>
+                        <input class="form-control" id="title" name="title" type="text" placeholder="{{ trans('lang.titre_placeholder') }}" value="{{ old('title') }}" />
                         @if($errors->has('titre'))
-                        <div class="text-danger mt-2">{{ $errors->first('titre') }}</div>
+                        <div class="text-danger mt-2">{{ $errors->first('title') }}</div>
                         @endif
                     </div>
                     <div class="form-group">
                         <!-- Nom input-->
                         <label for="description">@lang('lang.description_label')</label>
-                        <textarea class="form-control" id="description" name="description" placeholder="{{ trans('lang.lastname_placeholder') }}" value="{{ old('description') }}"></textarea>
+                        <textarea class="form-control" id="description" name="description" placeholder="{{ trans('lang.description_placeholder') }}" value="{{ old('description') }}"></textarea>
                         @if($errors->has('description'))
                         <div class="text-danger mt-2">{{ $errors->first('description') }}</div>
                         @endif

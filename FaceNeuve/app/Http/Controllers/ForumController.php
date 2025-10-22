@@ -4,6 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\Forum;
 use Illuminate\Http\Request;
+use App\Models\Student;
+use App\Models\User;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Auth;
+
 
 class ForumController extends Controller
 {
@@ -29,6 +34,26 @@ class ForumController extends Controller
      */
     public function store(Request $request)
     {
+
+        $request->validate([
+            'title' => 'required|regex:/^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/|max:100',
+            'description' => 'max:1000',
+        ]);
+
+        $student = Student::where('email', Auth::user()->email)->first();
+        $request->merge([
+            'student_id' => $student->id,
+            'due_date' => now()->format('Y-m-d'),
+        ]);
+
+        $forum = Forum::create([
+            'title' => $request->title,
+            'description' => $request->description,
+            'student_id' => $request->student_id,
+            'due_date' => $request->due_date,
+        ]);
+
+        return view('forum.index');
         //
     }
 
