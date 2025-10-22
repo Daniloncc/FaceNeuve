@@ -4,9 +4,11 @@
 
 <section class="page-section" id="contact">
     <div class="container">
+        @if(auth()->id() == 9)
         <div>
             <h2 class="section-heading text-uppercase">@lang('lang.title_student_show')</h2>
         </div>
+        @endif
         <div class="card mb-4 mt-5">
             <div class="card-header text-bg-light">
                 <h3 class="card-title mt-1 mb-1">{{$student->name}}, <strong>{{$student->firstname}}</strong></h3>

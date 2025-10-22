@@ -59,6 +59,19 @@
                     <li class="nav-item"><a class="nav-link me-lg-3" href="{{ route('user.create') }}">@lang('lang.signup')</a></li>
                     @endguest
                     <div class="dropdown">
+                        <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Forum
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Messages</a></li>
+                            <li><a class="dropdown-item" href="#">Materiel</a></li>
+                            @auth
+                            <li><a class="dropdown-item" href="#">Ajouter message</a></li>
+                            <li><a class="dropdown-item" href="#">Ajouter materiel</a></li>
+                            @endauth
+                        </ul>
+                    </div>
+                    <div class="dropdown">
                         <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             @lang('lang.language') <span class="text-primary"> {{ $locale == '' ? '(fr)' : "($locale)" }}</span>
                         </button>
