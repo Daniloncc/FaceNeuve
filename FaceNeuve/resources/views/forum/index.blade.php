@@ -1,0 +1,41 @@
+@extends('layouts.app')
+@section('title', trans('lang.text_header_forums'))
+@section('content')
+
+<section class="page-section" id="contact">
+    <div class="container">
+        <div>
+            <h2 class="section-heading text-uppercase">@lang('lang.title_forums')</h2>
+            <h3 class="section-subheading text-muted">@lang('lang.subtitle_forums')</h3>
+        </div>
+
+        <div class="grid grid-cols-4 gap-2">
+            @foreach($forums as $forum)
+            <div class="card mb-2 mt-3">
+                <div class="card-header text-bg-light">
+                    <h3 class="card-title mt-1 mb-1"><strong>{{$forum->title}},</strong></h3>
+                    <small>{{$forum->due_date}}</small>
+                    <small>| {{$forum->student->email}}</small>
+                </div>
+                <div class="card-body">
+                    <p class="card-text"><strong>{{$forum->description}}</strong></p>
+                </div>
+
+                @auth
+                @if($forum->student->email === auth()->user()->email)
+                <div class="card-footer text-bg-light">
+                    <div class="d-flex justify-content-end gap-3">
+                        <a href="{{ route('forum.edit', $forum->id) }}" class="btn btn-sm btn-primary"><i class="bi bi-pen"> </i>@lang('lang.button_edit')</a>
+                    </div>
+                </div>
+                @endif
+                @endauth
+            </div>
+            @endforeach
+        </div>
+        <div class="mt-5 mr-auto">{{$forums}}</div>
+    </div>
+
+</section>
+
+@endsection('content')

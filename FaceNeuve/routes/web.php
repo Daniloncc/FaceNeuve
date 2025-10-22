@@ -58,3 +58,4 @@ Route::middleware('auth')->group(function () {
     Route::get("/create/forum", [ForumController::class, 'create'])->name('forum.create');
     Route::post("/create/forum", [ForumController::class, 'store'])->name('forum.store');
 });
+Route::get("/index/forum", [ForumController::class, 'index'])->name('forum.index');

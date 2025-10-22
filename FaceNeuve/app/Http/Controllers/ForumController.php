@@ -17,7 +17,8 @@ class ForumController extends Controller
      */
     public function index()
     {
-        //
+        $forums = Forum::select()->orderby('due_date', 'ASC')->paginate(5);
+        return view('forum.index', ['forums' => $forums]);
     }
 
     /**
@@ -53,7 +54,8 @@ class ForumController extends Controller
             'due_date' => $request->due_date,
         ]);
 
-        return view('forum.index');
+        // $forums = Forum::select()->orderby('due_date', 'ASC');
+        return redirect()->route('forum.index');
         //
     }
 

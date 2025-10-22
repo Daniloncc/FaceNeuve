@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', trans('lang.text_header_student'))
+@section('title', trans('lang.text_header_forum_create'))
 @section('content')
 
 <section class="page-section" id="contact">

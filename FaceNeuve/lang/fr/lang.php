@@ -9,6 +9,8 @@ return [
     'text_header_user' => 'Utilisateur',
     'text_header_users_create' => 'Creer utilisateur',
     'text_header_login' => 'Connexion',
+    'text_header_forum_create' => "Ajouter un Forum",
+    'text_header_forums' => 'Forums',
 
     // MENU
     'menu' => 'Menu',
@@ -151,5 +153,9 @@ return [
     'titre_placeholder' => 'Le titre',
     'description_label' => 'Description :',
     'description_placeholder' => 'Votre message *',
+
+    // HEADER PAGE INDEX ORUM
+    'title_forums' => 'Les publications',
+    'subtitle_forums' => 'Voir ce que nos eleves pensent :',
 
 ];
