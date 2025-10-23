@@ -10,29 +10,54 @@
         </div>
         <form id="contactForm" class="mt-5" method="post">
             @csrf
-            <div class="row align-items-stretch mb-5">
-                <div class="col-md-6 mx-auto d-flex flex-column gap-3">
+            <div class="col-md-8 mx-auto d-flex flex-wrap gap-4 justify-content-between">
+                <!-- Colonne 1 - Français -->
+                <div class="flex-fill d-flex flex-column gap-3">
                     <div class="form-group">
-                        <!-- Prenom input-->
-                        <label for="title">@lang('lang.titre_label')</label>
-                        <input class="form-control" id="title" name="title" type="text" placeholder="{{ trans('lang.titre_placeholder') }}" value="{{ old('title') }}" />
-                        @if($errors->has('titre'))
-                        <div class="text-danger mt-2">{{ $errors->first('title') }}</div>
-                        @endif
-                    </div>
-                    <div class="form-group">
-                        <!-- Nom input-->
-                        <label for="description">@lang('lang.description_label')</label>
-                        <textarea class="form-control" id="description" name="description" placeholder="{{ trans('lang.description_placeholder') }}" value="{{ old('description') }}"></textarea>
-                        @if($errors->has('description'))
-                        <div class="text-danger mt-2">{{ $errors->first('description') }}</div>
+                        <label for="title_fr">Titre (FR) :</label>
+                        <input class="form-control" id="title_fr" name="title[fr]" type="text"
+                            placeholder="{{ trans('lang.titre_placeholder') }}"
+                            value="{{ old('title.fr') }}" />
+                        @if($errors->has('title.fr'))
+                        <div class="text-danger mt-2">{{ $errors->first('title.fr') }}</div>
                         @endif
                     </div>
 
+                    <div class="form-group">
+                        <label for="description_fr">Description (FR) :</label>
+                        <textarea class="form-control" rows="5" id="description_fr" name="description[fr]"
+                            placeholder="{{ trans('lang.description_placeholder') }}">{{ old('description.fr') }}</textarea>
+                        @if($errors->has('description.fr'))
+                        <div class="text-danger mt-2">{{ $errors->first('description.fr') }}</div>
+                        @endif
+                    </div>
+                </div>
+
+                <!-- Colonne 2 - Anglais -->
+                <div class="d-flex flex-column gap-3 flex-fill">
+                    <div class="form-group">
+                        <label for="title_en">Title (EN) :</label>
+                        <input class="form-control" id="title_en" name="title[en]" type="text"
+                            placeholder="{{ trans('lang.titre_placeholder') }}"
+                            value="{{ old('title.en') }}" />
+                        @if($errors->has('title.en'))
+                        <div class="text-danger mt-2">{{ $errors->first('title.en') }}</div>
+                        @endif
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description_en">Description (EN) :</label>
+                        <textarea class="form-control" rows="5" id="description_en" name="description[en]"
+                            placeholder="{{ trans('lang.description_placeholder') }}">{{ old('description.en') }}</textarea>
+                        @if($errors->has('description.en'))
+                        <div class="text-danger mt-2">{{ $errors->first('description.en') }}</div>
+                        @endif
+                    </div>
                 </div>
             </div>
+
             <!-- Submit Button-->
-            <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase " id="submitButton" type="submit">@lang('lang.form_button')</button></div>
+            <div class="text-center mt-4"><button class="btn btn-primary btn-xl text-uppercase " id="submitButton" type="submit">@lang('lang.form_button')</button></div>
         </form>
     </div>
 </section>
