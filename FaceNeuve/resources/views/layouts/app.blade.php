@@ -54,7 +54,6 @@
                     @endif
                     @endauth
                     <!-- General -->
-                    <li class="nav-item"><a class="nav-link me-lg-3" href="#download">@lang('lang.messages')</a></li>
                     @guest
                     <li class="nav-item"><a class="nav-link me-lg-3" href="{{ route('user.create') }}">@lang('lang.signup')</a></li>
                     @endguest
@@ -63,7 +62,7 @@
                             Forum
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Messages</a></li>
+                            <li><a class="dropdown-item" href="{{ route('forum.index') }}">Messages</a></li>
                             <li><a class="dropdown-item" href="#">Materiel</a></li>
                             @auth
                             <li><a class="dropdown-item" href="{{ route('forum.create') }}">Ajouter message</a></li>

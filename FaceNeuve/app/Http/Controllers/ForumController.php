@@ -9,7 +9,6 @@ use App\Models\User;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Auth;
 
-
 class ForumController extends Controller
 {
     /**
@@ -17,7 +16,7 @@ class ForumController extends Controller
      */
     public function index()
     {
-        $forums = Forum::select()->orderby('due_date', 'ASC')->paginate(5);
+        $forums = Forum::select()->orderby('date', 'DESC')->paginate(5);
         return view('forum.index', ['forums' => $forums]);
     }
 
@@ -27,7 +26,6 @@ class ForumController extends Controller
     public function create()
     {
         return view('forum.create');
-        //
     }
 
     /**
@@ -35,7 +33,6 @@ class ForumController extends Controller
      */
     public function store(Request $request)
     {
-
         $request->validate([
             'title' => 'required|regex:/^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/|max:100',
             'description' => 'max:1000',
@@ -44,19 +41,18 @@ class ForumController extends Controller
         $student = Student::where('email', Auth::user()->email)->first();
         $request->merge([
             'student_id' => $student->id,
-            'due_date' => now()->format('Y-m-d'),
+            'date' => now()->format('Y-m-d'),
         ]);
 
         $forum = Forum::create([
             'title' => $request->title,
             'description' => $request->description,
             'student_id' => $request->student_id,
-            'due_date' => $request->due_date,
+            'date' => $request->date,
         ]);
 
         // $forums = Forum::select()->orderby('due_date', 'ASC');
         return redirect()->route('forum.index');
-        //
     }
 
     /**
