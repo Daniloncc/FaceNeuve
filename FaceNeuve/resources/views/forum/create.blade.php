@@ -15,20 +15,20 @@
                 <div class="flex-fill d-flex flex-column gap-3">
                     <div class="form-group">
                         <label for="title_fr">Titre (FR) :</label>
-                        <input class="form-control" id="title_fr" name="title[fr]" type="text"
+                        <input class="form-control" id="title_fr" name="title_fr" type="text"
                             placeholder="{{ trans('lang.titre_placeholder') }}"
-                            value="{{ old('title.fr') }}" />
-                        @if($errors->has('title.fr'))
-                        <div class="text-danger mt-2">{{ $errors->first('title.fr') }}</div>
+                            value="{{ old('title_fr') }}" />
+                        @if($errors->has('title_fr'))
+                        <div class="text-danger mt-2">{{ $errors->first('title_fr') }}</div>
                         @endif
                     </div>
 
                     <div class="form-group">
                         <label for="description_fr">Description (FR) :</label>
-                        <textarea class="form-control" rows="5" id="description_fr" name="description[fr]"
-                            placeholder="{{ trans('lang.description_placeholder') }}">{{ old('description.fr') }}</textarea>
+                        <textarea class="form-control" rows="5" id="description_fr" name="description_fr"
+                            placeholder="{{ trans('lang.description_placeholder') }}">{{ old('description_fr') }}</textarea>
                         @if($errors->has('description.fr'))
-                        <div class="text-danger mt-2">{{ $errors->first('description.fr') }}</div>
+                        <div class="text-danger mt-2">{{ $errors->first('description_fr') }}</div>
                         @endif
                     </div>
                 </div>
@@ -37,17 +37,17 @@
                 <div class="d-flex flex-column gap-3 flex-fill">
                     <div class="form-group">
                         <label for="title_en">Title (EN) :</label>
-                        <input class="form-control" id="title_en" name="title[en]" type="text"
+                        <input class="form-control" id="title_en" name="title_en" type="text"
                             placeholder="{{ trans('lang.titre_placeholder') }}"
-                            value="{{ old('title.en') }}" />
-                        @if($errors->has('title.en'))
-                        <div class="text-danger mt-2">{{ $errors->first('title.en') }}</div>
+                            value="{{ old('title_en') }}" />
+                        @if($errors->has('title_en'))
+                        <div class="text-danger mt-2">{{ $errors->first('title_en') }}</div>
                         @endif
                     </div>
 
                     <div class="form-group">
                         <label for="description_en">Description (EN) :</label>
-                        <textarea class="form-control" rows="5" id="description_en" name="description[en]"
+                        <textarea class="form-control" rows="5" id="description_en" name="description_en"
                             placeholder="{{ trans('lang.description_placeholder') }}">{{ old('description.en') }}</textarea>
                         @if($errors->has('description.en'))
                         <div class="text-danger mt-2">{{ $errors->first('description.en') }}</div>

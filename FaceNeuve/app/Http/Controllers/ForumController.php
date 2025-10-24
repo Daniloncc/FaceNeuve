@@ -33,25 +33,37 @@ class ForumController extends Controller
      */
     public function store(Request $request)
     {
+        // print("<pre>");
+        // print_r($request->toArray());
+        // print("</pre>");
+        // die;
         $request->validate([
-            'title' => 'required|regex:/^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/|max:100',
-            'description' => 'max:1000',
+            'title_fr' => 'required|regex:/^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/|max:100',
+            'description_fr' => 'max:1000',
+            'title_en' => 'required|regex:/^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/|max:100',
+            'description_en' => 'max:1000',
+        ]);
+
+        $forum_title = array_filter([
+            'title_fr' => $request->title_fr,
+            'title_en' => $request->title_en,
+        ]);
+
+        $forum_description = array_filter([
+            'description_fr' => $request->description_fr,
+            'description_en' => $request->description_en
         ]);
 
         $student = Student::where('email', Auth::user()->email)->first();
-        $request->merge([
+
+        $forum = Forum::create([
+            'title' => $forum_title,
+            'description' => $forum_description,
             'student_id' => $student->id,
             'date' => now()->format('Y-m-d'),
         ]);
 
-        $forum = Forum::create([
-            'title' => $request->title,
-            'description' => $request->description,
-            'student_id' => $request->student_id,
-            'date' => $request->date,
-        ]);
-
-        // $forums = Forum::select()->orderby('due_date', 'ASC');
+        // // $forums = Forum::select()->orderby('due_date', 'ASC');
         return redirect()->route('forum.index');
     }
 
