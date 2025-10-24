@@ -17,6 +17,11 @@ class ForumController extends Controller
     public function index()
     {
         $forums = Forum::select()->orderby('date', 'DESC')->paginate(5);
+        // print("<pre>");
+        // print_r($forums->toArray());
+        // print("</pre>");
+        // die;
+
         return view('forum.index', ['forums' => $forums]);
     }
 
@@ -45,13 +50,13 @@ class ForumController extends Controller
         ]);
 
         $forum_title = array_filter([
-            'title_fr' => $request->title_fr,
-            'title_en' => $request->title_en,
+            'fr' => $request->title_fr,
+            'en' => $request->title_en,
         ]);
 
         $forum_description = array_filter([
-            'description_fr' => $request->description_fr,
-            'description_en' => $request->description_en
+            'fr' => $request->description_fr,
+            'en' => $request->description_en
         ]);
 
         $student = Student::where('email', Auth::user()->email)->first();
@@ -80,7 +85,11 @@ class ForumController extends Controller
      */
     public function edit(Forum $forum)
     {
-        //
+        // print("<pre>");
+        // print_r($forum->toArray());
+        // print("</pre>");
+        // die;
+        return view('forum.edit', ['forum' => $forum]);
     }
 
     /**
@@ -88,6 +97,35 @@ class ForumController extends Controller
      */
     public function update(Request $request, Forum $forum)
     {
+
+        $request->validate([
+            'title_fr' => 'required|regex:/^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/|max:100',
+            'description_fr' => 'max:1000',
+            'title_en' => 'required|regex:/^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/|max:100',
+            'description_en' => 'max:1000',
+        ]);
+
+        $forum_title = array_filter([
+            'fr' => $request->title_fr,
+            'en' => $request->title_en,
+        ]);
+
+        $forum_description = array_filter([
+            'fr' => $request->description_fr,
+            'en' => $request->description_en
+        ]);
+
+        $student = Student::where('email', Auth::user()->email)->first();
+
+        $forum->update([
+            'title' => $forum_title,
+            'description' => $forum_description,
+            'student_id' => $student->id,
+            'date' => now()->format('Y-m-d'),
+        ]);
+
+        // // $forums = Forum::select()->orderby('due_date', 'ASC');
+        return redirect()->route('forum.index');
         //
     }
 

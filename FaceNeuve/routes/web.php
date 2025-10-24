@@ -58,6 +58,6 @@ Route::middleware('auth')->group(function () {
     Route::get("/create/forum", [ForumController::class, 'create'])->name('forum.create');
     Route::post("/create/forum", [ForumController::class, 'store'])->name('forum.store');
     Route::get("/edit/forum/{forum}", [ForumController::class, 'edit'])->name('forum.edit');
-    
+    Route::post("/edit/forum/{forum}", [ForumController::class, 'update'])->name('forum.update');
 });
 Route::get("/index/forum", [ForumController::class, 'index'])->name('forum.index');
