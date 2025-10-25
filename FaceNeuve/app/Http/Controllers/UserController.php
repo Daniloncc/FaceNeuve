@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Student;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -71,6 +72,18 @@ class UserController extends Controller
     }
 
     /**
+     * Display the specified resource.
+     */
+    public function profil(User $user)
+    {
+        // $user = User::where('id', Auth::id())->first();
+
+        $student = Student::where('email', $user->email)->first();
+        return view('student.show', ['student' => $student]);
+    }
+
+
+    /**
      * Show the form for editing the specified resource.
      */
     public function edit(User $user)
@@ -78,6 +91,10 @@ class UserController extends Controller
         // print("<pre>");
         // print_r($user->toArray());
         // print("</pre>");
+        // die;
+        // $user = User::where('id', $request->id)->first();
+        $student = Student::where('email', $user->email)->first();
+        return view('student.show', ['student' => $student]);
     }
 
     /**

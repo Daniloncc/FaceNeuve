@@ -35,6 +35,10 @@ $locale = session()->get('locale', config('app.locale', 'fr'));
                         <a href="{{ route('forum.edit', $forum->id) }}" class="btn btn-sm btn-primary">
                             <i class="bi bi-pen"></i> @lang('lang.button_edit')
                         </a>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" data-modal>
+                            <i class="bi bi-trash"></i> @lang('lang.button_delete')
+                        </button>
                     </div>
                 </div>
                 @endif
@@ -43,6 +47,30 @@ $locale = session()->get('locale', config('app.locale', 'fr'));
             @endforeach
         </div>
         <div class="mt-5 mr-auto">{{$forums->links()}}</div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">@lang('lang.title_modal')</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body">
+                    @lang('lang.subtitle_modal')
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">@lang('lang.annuler_modal')</button>
+                    <form action="{{ route('forum.destroy') }}" method="post">
+                        @csrf
+                        @method('delete')
+                        <input type="hidden" name="id" value="{{ $forum->id }}">
+                        <input type="submit" value="{{ trans('lang.button_delete')}}" class="btn btn-sm btn-outline-danger">
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 

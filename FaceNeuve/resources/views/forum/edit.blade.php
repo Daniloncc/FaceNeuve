@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', trans('lang.text_header_forum_create'))
+@section('title', trans('lang.text_header_forum_edit'))
 @section('content')
 
 @php
@@ -9,8 +9,8 @@ $locale = session()->get('locale', config('app.locale', 'fr'));
 <section class="page-section" id="contact">
     <div class="container">
         <div class="text-center">
-            <h2 class="section-heading text-uppercase">@lang('lang.titre_label')</h2>
-            <h3 class="section-subheading text-muted">@lang('lang.forum_soustitre')</h3>
+            <h2 class="section-heading text-uppercase">@lang('lang.titre_label_edit')</h2>
+            <h3 class="section-subheading text-muted">@lang('lang.forum_soustitre_edit')</h3>
         </div>
         <form id="contactForm" class="mt-5" method="post">
             @csrf
@@ -62,9 +62,13 @@ $locale = session()->get('locale', config('app.locale', 'fr'));
             </div>
 
             <!-- Submit Button-->
-            <div class="text-center mt-4"><button class="btn btn-primary btn-xl text-uppercase " id="submitButton" type="submit">@lang('lang.form_button')</button></div>
+            <div class="text-center mt-4"><button class="btn btn-primary btn-xl text-uppercase " id="submitButton" type="submit">@lang('lang.form_button')</button>
+            </div>
+            <a href="{{ url()->previous() }}" class="btn btn-sm btn-primary mt-3 p-2">← @lang('lang.button_back')</a>
         </form>
+
     </div>
+
 </section>
 
 @endsection('content')

@@ -21,6 +21,7 @@
                 <tr>
                     <th scope="row">{{$user->name}}</th>
                     <td>{{$user->email}}</td>
+
                     <td><a href="{{ route('user.show', $user->id) }}" class="btn btn-sm btn-outline-primary"><i class="bi bi-eye px-2"></i></a></td>
                 </tr>
                 @endforeach

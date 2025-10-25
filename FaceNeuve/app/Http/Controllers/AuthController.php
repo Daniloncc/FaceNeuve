@@ -53,6 +53,7 @@ class AuthController extends Controller
         // print("</pre>");
         // die;
         Auth::login($user);
+
         return redirect()->intended(route('user.index'))->with('message', true);
     }
 

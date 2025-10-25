@@ -1,16 +1,27 @@
 <?php
 return [
+
+    // MENU PROFIL
+    'menu_profile' => 'Profil',
+    'menu_view_profile' => 'Voir le profil',
+    'menu_edit_profile' => 'Modifier le profil',
+    'menu_settings' => 'Paramètres',
+    'menu_notifications' => 'Notifications',
+    'menu_privacy' => 'Confidentialité',
+    'menu_logout' => 'Déconnexion',
+
     // TITLE HEADER
-    'text_header_welcome' => "Bienvenu",
+    'text_header_welcome' => "Bienvenue",
     'text_header_student' => "Ajouter un étudiant",
     'text_header_students' => "Étudiants",
-    'text_header_edit' => "Éditer étudiant",
+    'text_header_edit' => "Modifier un étudiant",
     'text_header_users' => 'Utilisateurs',
     'text_header_user' => 'Utilisateur',
-    'text_header_users_create' => 'Creer utilisateur',
+    'text_header_users_create' => 'Créer un utilisateur',
     'text_header_login' => 'Connexion',
-    'text_header_forum_create' => "Ajouter un Forum",
+    'text_header_forum_create' => "Ajouter un forum",
     'text_header_forums' => 'Forums',
+    'text_header_forum_edit' => 'Modifier le forum',
 
     // MENU
     'menu' => 'Menu',
@@ -27,25 +38,25 @@ return [
     'logout' => 'Déconnexion',
 
     // BUTTON
-    'button_back' => 'Retourner',
-    'button_edit' => 'Éditer',
+    'button_back' => 'Retour',
+    'button_edit' => 'Modifier',
     'button_delete' => 'Supprimer',
     'button_update' => 'Mettre à jour',
-    'button_login' => 'Connectez-vous',
+    'button_login' => 'Se connecter',
 
     // STUDENT 
 
     // HEADER PAGE INDEX
     'title_students' => 'Nos étudiants',
     'subtitle_students' => 'Les étudiants inscrits sur la plateforme :',
-    'see_more' => 'Voir Plus',
+    'see_more' => 'Voir plus',
 
     // HEADER PAGE SHOW 
-    'title_student_show' => 'Éleve :',
+    'title_student_show' => 'Élève :',
 
     // HEADER PAGE EDIT
-    'title_student_edit' => 'Éditer le profil de l’étudiant',
-    'subtitle_student_edit' => 'Modifiez les informations de cette compte :',
+    'title_student_edit' => 'Modifier le profil de l\'étudiant',
+    'subtitle_student_edit' => 'Modifiez les informations de ce compte :',
 
     // USER
 
@@ -54,8 +65,8 @@ return [
     'subtitle_users' => 'Les utilisateurs inscrits sur la plateforme :',
 
     // HEADER PAGE CREATE
-    'title_users_create' => 'Inscription d’un nouvel utilisateur',
-    'subtitle_users_create' => 'Remplissez le formulaire ci-dessous pour créer une compte et accéder à toutes nos fonctionnalités.',
+    'title_users_create' => 'Inscription d\'un nouvel utilisateur',
+    'subtitle_users_create' => 'Remplissez le formulaire ci-dessous pour créer un compte et accéder à toutes nos fonctionnalités.',
 
     // HEADER PAGE SHOW 
     'title_users_show' => 'Utilisateur :',
@@ -77,31 +88,31 @@ return [
     'header_btn_login' => "Se connecter",
 
     // --- ASIDE (Citation) ---
-    'aside_quote' => '"FaceNeuve facilite la vie étudiante en centralisant l’information et en renforçant les liens entre les étudiants du Collège Maisonneuve."',
+    'aside_quote' => '"FaceNeuve facilite la vie étudiante en centralisant l\'information et en renforçant les liens entre les étudiants du Collège Maisonneuve."',
 
     // --- SECTION: Témoignages ---
     'section_students_title' => "Ce que disent les étudiants",
-    'section_students_subtitle' => "Leurs impressions sur l’expérience FaceNeuve",
+    'section_students_subtitle' => "Leurs impressions sur l'expérience FaceNeuve",
 
     // Témoignages individuels
     'testimonial_1_name' => "Camille R.",
-    'testimonial_1_text' => '"FaceNeuve m’a permis de mieux organiser mes cours et de collaborer facilement avec mes camarades."',
+    'testimonial_1_text' => '"FaceNeuve m\'a permis de mieux organiser mes cours et de collaborer facilement avec mes camarades."',
 
     'testimonial_2_name' => "Julien M.",
-    'testimonial_2_text' => '"J’aime l’interface simple et intuitive, ça rend l’apprentissage beaucoup plus agréable."',
+    'testimonial_2_text' => '"J\'aime l\'interface simple et intuitive, ça rend l\'apprentissage beaucoup plus agréable."',
 
     'testimonial_3_name' => "Danilo L.",
-    'testimonial_3_text' => '"Grâce à FaceNeuve, j’ai pu trouver de nouvelles méthodes d’étude et partager des idées innovantes."',
+    'testimonial_3_text' => '"Grâce à FaceNeuve, j\'ai pu trouver de nouvelles méthodes d\'étude et partager des idées innovantes."',
 
     'testimonial_4_name' => "David P.",
-    'testimonial_4_text' => '"Une vraie communauté d’étudiants! Je me sens soutenu et motivé à progresser chaque jour."',
+    'testimonial_4_text' => '"Une vraie communauté d\'étudiants! Je me sens soutenu et motivé à progresser chaque jour."',
 
     // Texte de conclusion
-    'students_paragraph' => "Les étudiants qui utilisent FaceNeuve partagent leurs avis sur la plateforme : simplicité, entraide et motivation. Découvrez leurs témoignages et voyez comment FaceNeuve transforme leur manière d’apprendre et de collaborer.",
+    'students_paragraph' => "Les étudiants qui utilisent FaceNeuve partagent leurs avis sur la plateforme : simplicité, entraide et motivation. Découvrez leurs témoignages et voyez comment FaceNeuve transforme leur manière d\'apprendre et de collaborer.",
 
     // --- SECTION: Découverte ---
     'discover_title' => "Découvrez FaceNeuve",
-    'discover_paragraph' => "FaceNeuve est une plateforme pensée par et pour les étudiants. Elle facilite la collaboration, le partage de ressources et la création d’un réseau d’entraide. Que ce soit pour mieux comprendre un cours, trouver des idées innovantes ou simplement rester motivé, FaceNeuve vous accompagne dans votre parcours académique.",
+    'discover_paragraph' => "FaceNeuve est une plateforme pensée par et pour les étudiants. Elle facilite la collaboration, le partage de ressources et la création d\'un réseau d\'entraide. Que ce soit pour mieux comprendre un cours, trouver des idées innovantes ou simplement rester motivé, FaceNeuve vous accompagne dans votre parcours académique.",
     'discover_btn' => "Se connecter",
     'discover_img' => "/assets/img/eleves.jpg",
 
@@ -116,15 +127,15 @@ return [
 
     // FORMULAIRE -- FORM
     'firstname_label' => 'Prénom :',
-    'firstname_placeholder' => 'Ton prénom *',
+    'firstname_placeholder' => 'Votre prénom *',
     'lastname_label' => 'Nom :',
-    'lastname_placeholder' => 'Ton nom *',
+    'lastname_placeholder' => 'Votre nom *',
     'email_label' => 'Courriel :',
-    'email_placeholder' => 'Ton courriel *',
+    'email_placeholder' => 'Votre courriel *',
     'phone_label' => 'Téléphone :',
     'phone_placeholder' => 'Format : XXXXXXXXXX',
     'address_label' => 'Adresse :',
-    'address_placeholder' => 'Ton adresse *',
+    'address_placeholder' => 'Votre adresse *',
     'birthday_label' => 'Date de naissance :',
     'city_label' => 'Ville :',
     'city_placeholder' => 'Choisissez la ville',
@@ -137,12 +148,12 @@ return [
     // FOOTER
     'rights' => 'Tous droits réservés.',
     'privacy' => 'Confidentialité',
-    'terms' => 'Conditions d’utilisation',
+    'terms' => 'Conditions d\'utilisation',
     'faq' => 'FAQ',
 
     // MESSAGES
     'error_password' => 'Mot de passe invalide !',
-    'welcome_text_connection' => 'Vous etes bien connecte !',
+    'welcome_text_connection' => 'Vous êtes bien connecté !',
 
     // FORUM
     'forum_titre' => 'Forum',
@@ -154,8 +165,12 @@ return [
     'description_label' => 'Description :',
     'description_placeholder' => 'Votre message *',
 
-    // HEADER PAGE INDEX ORUM
+    // HEADER PAGE INDEX FORUM
     'title_forums' => 'Les publications',
-    'subtitle_forums' => 'Voir ce que nos eleves pensent :',
+    'subtitle_forums' => 'Voir ce que nos élèves pensent :',
+
+    // HEADER PAGE EDIT FORUM
+    'titre_label_edit' => 'Modifier le forum',
+    'forum_soustitre_edit' => 'Vous pouvez corriger dans les 2 langues',
 
 ];

@@ -49,9 +49,26 @@
                     @endauth
                     <!-- Connection Etudiant -->
                     @auth
-                    @if(auth()->id() !== 9)
-                    <li class="nav-item"><a class="nav-link me-lg-3" href="{{ route('user.index') }}">Ajouter Forum</a></li>
-                    @endif
+                    <div class="dropdown">
+                        <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            @lang('lang.menu_profile')
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ route('user.profil', auth()->id()) }}">@lang('lang.menu_view_profile')</a></li>
+                            <li><a class="dropdown-item" href="#">@lang('lang.menu_settings')</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">@lang('lang.menu_notifications')</a></li>
+                            <li><a class="dropdown-item" href="#">@lang('lang.menu_privacy')</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a class="nav-link me-lg-3" href="{{ route('logout') }}">@lang('lang.logout')</a>
+                            </li>
+                        </ul>
+                    </div>
                     @endauth
                     <!-- General -->
                     @guest
@@ -63,9 +80,12 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ route('forum.index') }}">Messages</a></li>
-                            <li><a class="dropdown-item" href="#">Materiel</a></li>
                             @auth
                             <li><a class="dropdown-item" href="{{ route('forum.create') }}">Ajouter message</a></li>
+                            @endauth
+                            <hr>
+                            <li><a class="dropdown-item" href="#">Materiel</a></li>
+                            @auth
                             <li><a class="dropdown-item" href="#">Ajouter materiel</a></li>
                             @endauth
                         </ul>
@@ -88,14 +108,7 @@
                     </span>
                 </button>
                 @endguest
-                @auth
-                <button class="btn btn-danger rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
-                    <span class="d-flex align-items-center">
-                        <i class="bi-chat-text-fill me-2"></i>
-                        <a class="nav-link me-lg-3" href="{{ route('logout') }}">@lang('lang.logout')</a>
-                    </span>
-                </button>
-                @endauth
+
             </div>
         </div>
     </nav>

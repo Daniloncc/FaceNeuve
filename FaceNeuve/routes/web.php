@@ -39,7 +39,8 @@ Route::middleware('auth')->group(function () {
 // User
 Route::middleware('auth')->group(function () {
     Route::get('/users', [UserController::class, 'index'])->name('user.index');
-    Route::get('/user/{user}', [UserController::class, 'show'])->name('user.show');
+    Route::get('/user/show/{user}', [UserController::class, 'show'])->name('user.show');
+    Route::get('/user/{user}', [UserController::class, 'profil'])->name('user.profil');
     Route::get('/edit/user/{user}', [UserController::class, 'edit'])->name('user.edit');
 });
 Route::get('/registration', [UserController::class, 'create'])->name('user.create');
@@ -59,5 +60,6 @@ Route::middleware('auth')->group(function () {
     Route::post("/create/forum", [ForumController::class, 'store'])->name('forum.store');
     Route::get("/edit/forum/{forum}", [ForumController::class, 'edit'])->name('forum.edit');
     Route::post("/edit/forum/{forum}", [ForumController::class, 'update'])->name('forum.update');
+    Route::delete("/index/forum", [ForumController::class, 'destroy'])->name('forum.destroy');
 });
 Route::get("/index/forum", [ForumController::class, 'index'])->name('forum.index');

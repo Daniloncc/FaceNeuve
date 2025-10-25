@@ -59,6 +59,7 @@
             <!-- Submit Button-->
             <div class="text-center mt-4"><button class="btn btn-primary btn-xl text-uppercase " id="submitButton" type="submit">@lang('lang.form_button')</button></div>
         </form>
+        <a href="{{ url()->previous() }}" class="btn btn-sm btn-primary mt-3 p-2">← @lang('lang.button_back')</a>
     </div>
 </section>
 

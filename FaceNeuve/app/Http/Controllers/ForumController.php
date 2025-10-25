@@ -43,10 +43,10 @@ class ForumController extends Controller
         // print("</pre>");
         // die;
         $request->validate([
-            'title_fr' => 'required|regex:/^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/|max:100',
-            'description_fr' => 'max:1000',
-            'title_en' => 'required|regex:/^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/|max:100',
-            'description_en' => 'max:1000',
+            'title_fr' => 'required|max:100',
+            'description_fr' => 'required|max:1000',
+            'title_en' => 'required|max:100',
+            'description_en' => 'required|max:1000',
         ]);
 
         $forum_title = array_filter([
@@ -100,9 +100,9 @@ class ForumController extends Controller
 
         $request->validate([
             'title_fr' => 'required|regex:/^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/|max:100',
-            'description_fr' => 'max:1000',
+            'description_fr' => 'required|max:1000',
             'title_en' => 'required|regex:/^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/|max:100',
-            'description_en' => 'max:1000',
+            'description_en' => 'required|max:1000',
         ]);
 
         $forum_title = array_filter([
@@ -132,8 +132,11 @@ class ForumController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Forum $forum)
+    public function destroy(Request $request)
     {
-        //
+
+        $forum = Forum::select()->where('id', $request->id)->first();
+        $forum->delete();
+        return redirect()->route('forum.index');
     }
 }
