@@ -142,5 +142,21 @@ class DocumentController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Document $document) {}
+    public function destroy(Document $document)
+    {
+        // Vérifier que l'utilisateur est le propriétaire
+        $student = Student::where('email', Auth::user()->email)->first();
+
+        if ($document->student_id !== $student->id) {
+            return back();
+        }
+
+        // Supprimer le fichier du stockage
+        Storage::disk('public')->delete($document->file_path);
+
+        // Supprimer l'enregistrement
+        $document->delete();
+
+        return redirect()->route('documents.index')->withSuccess('Document supprimé avec succès!');
+    }
 }

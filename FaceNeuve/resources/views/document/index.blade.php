@@ -73,6 +73,30 @@ $locale = session()->get('locale', config('app.locale', 'fr'));
                                                 @endif
                                             </td>
 
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h1 class="modal-title fs-5" id="exampleModalLabel">@lang('lang.title_modal')</h1>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            @lang('lang.subtitle_modal')
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">@lang('lang.annuler_modal')</button>
+                                                            <form action="{{ route('documents.destroy', $document->id) }}" method="post">
+                                                                @csrf
+                                                                @method('delete')
+                                                                <input type="hidden" name="id" value="{{ $document->id }}">
+                                                                <input type="submit" value="{{ trans('lang.button_delete')}}" class="btn btn-sm btn-outline-danger">
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                         </tr>
                                         @endforeach
                                     </tbody>
@@ -87,29 +111,7 @@ $locale = session()->get('locale', config('app.locale', 'fr'));
         <div class="mt-5 mr-auto">{{$documents}}</div>
     </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">@lang('lang.title_modal')</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-                </div>
-                <div class="modal-body">
-                    @lang('lang.subtitle_modal')
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">@lang('lang.annuler_modal')</button>
-                    <form action="" method="post">
-                        @csrf
-                        @method('delete')
-                        <input type="hidden" name="id" value="{{ $document->id }}">
-                        <input type="submit" value="{{ trans('lang.button_delete')}}" class="btn btn-sm btn-outline-danger">
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+
 </section>
 
 @endsection
