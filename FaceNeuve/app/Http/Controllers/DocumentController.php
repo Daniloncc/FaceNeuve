@@ -79,7 +79,15 @@ class DocumentController extends Controller
      */
     public function edit(Document $document)
     {
-        //
+
+        // Vérifier que l'utilisateur est le propriétaire
+        $student = Student::where('email', Auth::user()->email)->first();
+
+        if ($document->student_id !== $student->id) {
+            return back();
+        }
+
+        return view('document.edit', ['document' => $document]);
     }
 
     /**

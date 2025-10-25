@@ -196,4 +196,11 @@ return [
     'table_actions' => 'Actions',
     'button_download' => 'Download',
     'confirm_delete_document' => 'Are you sure you want to delete this document?',
+
+    // Edit document page
+    'edit_document_title' => 'Edit document',
+    'current_file_label' => 'Current file',
+    'replace_file_label' => 'Replace file (optional)',
+    'keep_current_file_help' => 'Leave empty to keep the current file',
+    'button_update' => 'Update',
 ];

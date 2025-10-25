@@ -198,4 +198,11 @@ return [
     'table_actions' => 'Actions',
     'button_download' => 'Télécharger',
     'confirm_delete_document' => 'Êtes-vous sûr de vouloir supprimer ce document?',
+
+    // Page modifier le document
+    'edit_document_title' => 'Modifier le document',
+    'current_file_label' => 'Fichier actuel',
+    'replace_file_label' => 'Remplacer le fichier (optionnel)',
+    'keep_current_file_help' => 'Laissez vide pour garder le fichier actuel',
+    'button_update' => 'Mettre à jour',
 ];

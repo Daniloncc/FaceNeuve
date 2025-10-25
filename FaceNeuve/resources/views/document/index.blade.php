@@ -62,7 +62,7 @@ $locale = session()->get('locale', config('app.locale', 'fr'));
                                                 </a>
                                                 @endif
                                                 @if(Auth::user()->email === $document->student->email)
-                                                <a href="{{ route('documents.edit', $document) }}"
+                                                <a href="{{ route('documents.edit', $document->id) }}"
                                                     class="btn btn-sm btn-primary">
                                                     <i class="fas fa-edit"></i> @lang('lang.button_edit')
                                                 </a>
