@@ -11,37 +11,19 @@ use Illuminate\Support\Facades\Auth;
 
 class ForumController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
         $forums = Forum::select()->orderby('date', 'DESC')->paginate(5);
-        // print("<pre>");
-        // print_r($forums->toArray());
-        // print("</pre>");
-        // die;
-
         return view('forum.index', ['forums' => $forums]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         return view('forum.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        // print("<pre>");
-        // print_r($request->toArray());
-        // print("</pre>");
-        // die;
         $request->validate([
             'title_fr' => 'required|max:100',
             'description_fr' => 'required|max:1000',
@@ -72,31 +54,26 @@ class ForumController extends Controller
         return redirect()->route('forum.index');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Forum $forum)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(Forum $forum)
     {
-        // print("<pre>");
-        // print_r($forum->toArray());
-        // print("</pre>");
-        // die;
+        // Vérifier que l'utilisateur est le propriétaire
+        $student = Student::where('email', Auth::user()->email)->first();
+
+        if ($forum->student_id !== $student->id) {
+            return back();
+        }
         return view('forum.edit', ['forum' => $forum]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, Forum $forum)
     {
+
+        // Vérifier que l'utilisateur est le propriétaire
+        $student = Student::where('email', Auth::user()->email)->first();
+
+        if ($forum->student_id !== $student->id) {
+            return back();
+        }
 
         $request->validate([
             'title_fr' => 'required|regex:/^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/|max:100',
@@ -129,13 +106,22 @@ class ForumController extends Controller
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(Request $request)
     {
-
         $forum = Forum::select()->where('id', $request->id)->first();
+        // Vérifier que l'utilisateur est le propriétaire
+        $student = Student::where('email', Auth::user()->email)->first();
+
+        // print("<pre>");
+        // print_r($student->toArray());
+        // print("</pre>");
+
+        // print("<pre>");
+        // print_r($forum->toArray());
+        // print("</pre>");
+        if ($forum->student_id !== $student->id) {
+            return back();
+        }
         $forum->delete();
         return redirect()->route('forum.index');
     }

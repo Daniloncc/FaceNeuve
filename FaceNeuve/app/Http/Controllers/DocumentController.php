@@ -10,26 +10,17 @@ use Illuminate\Support\Facades\Storage;
 
 class DocumentController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
         $documents = Document::with('student')->orderBy('date', 'desc')->paginate(5);
         return view('document.index', ['documents' => $documents]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         return view('document.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         $request->validate([
@@ -67,20 +58,8 @@ class DocumentController extends Controller
         return redirect()->route('documents.index')->withSuccess('Document partagé avec succès!');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Document $document)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(Document $document)
     {
-
         // Vérifier que l'utilisateur est le propriétaire
         $student = Student::where('email', Auth::user()->email)->first();
 
@@ -91,9 +70,6 @@ class DocumentController extends Controller
         return view('document.edit', ['document' => $document]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, Document $document)
     {
         // Vérifier que l'utilisateur est le propriétaire
@@ -139,9 +115,6 @@ class DocumentController extends Controller
         return redirect()->route('documents.index');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(Document $document)
     {
         // Vérifier que l'utilisateur est le propriétaire
@@ -160,9 +133,6 @@ class DocumentController extends Controller
         return redirect()->route('documents.index')->withSuccess('Document supprimé avec succès!');
     }
 
-    /**
-     * Télécharger un document
-     */
     public function download(Document $document)
     {
         // Vérifier si le fichier existe dans le stockage

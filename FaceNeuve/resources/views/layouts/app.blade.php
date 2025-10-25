@@ -54,7 +54,9 @@
                             @lang('lang.menu_profile')
                         </a>
                         <ul class="dropdown-menu">
+                            @if(auth()->id() !== 9)
                             <li><a class="dropdown-item" href="{{ route('user.profil', auth()->id()) }}">@lang('lang.menu_view_profile')</a></li>
+                            @endif
                             <li><a class="dropdown-item" href="#">@lang('lang.menu_settings')</a></li>
                             <li>
                                 <hr class="dropdown-divider">
@@ -81,12 +83,16 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ route('forum.index') }}">Messages</a></li>
                             @auth
+                            @if(auth()->id() !== 9)
                             <li><a class="dropdown-item" href="{{ route('forum.create') }}">Ajouter message</a></li>
+                            @endif
                             @endauth
                             <hr>
                             <li><a class="dropdown-item" href="{{ route('documents.index') }}">Materiel</a></li>
                             @auth
+                            @if(auth()->id() !== 9)
                             <li><a class="dropdown-item" href="{{ route('documents.create') }}">Ajouter materiel</a></li>
+                            @endif
                             @endauth
                         </ul>
                     </div>
