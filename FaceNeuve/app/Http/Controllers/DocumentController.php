@@ -6,6 +6,7 @@ use App\Models\Document;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Student;
+use Illuminate\Support\Facades\Storage;
 
 class DocumentController extends Controller
 {
@@ -95,14 +96,51 @@ class DocumentController extends Controller
      */
     public function update(Request $request, Document $document)
     {
-        //
+        // Vérifier que l'utilisateur est le propriétaire
+        $student = Student::where('email', Auth::user()->email)->first();
+
+        if ($document->student_id !== $student->id) {
+            return back();
+        }
+
+        $request->validate([
+            'title_fr' => 'required|max:255',
+            'title_en' => 'nullable|max:255',
+            'file' => 'nullable|file|mimes:pdf,zip,doc,docx|max:10240',
+        ]);
+
+        // Préparer le titre
+        $document_title = array_filter([
+            'fr' => $request->title_fr,
+            'en' => $request->title_en,
+        ]);
+
+        $data = [
+            'title' => $document_title,
+        ];
+
+        // Si un nouveau fichier est téléchargé
+        if ($request->hasFile('file')) {
+            // Supprimer l'ancien fichier
+            Storage::disk('public')->delete($document->file_path);
+
+            // Sauvegarder le nouveau fichier
+            $file = $request->file('file');
+            $fileName = time() . '_' . $file->getClientOriginalName();
+            $filePath = $file->storeAs('documents', $fileName, 'public');
+
+            $data['file_path'] = $filePath;
+            $data['file_name'] = $file->getClientOriginalName();
+            $data['file_type'] = $file->getClientOriginalExtension();
+        }
+
+        $document->update($data);
+
+        return redirect()->route('documents.index');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Document $document)
-    {
-        //
-    }
+    public function destroy(Document $document) {}
 }

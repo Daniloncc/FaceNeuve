@@ -19,7 +19,7 @@ $locale = session()->get('locale', config('app.locale', 'fr'));
                         <div class="card-header">@lang('lang.edit_document_title')</div>
 
                         <div class="card-body">
-                            <form method="POST" action="{{ route('documents.update', $document) }}" enctype="multipart/form-data">
+                            <form method="POST" action="{{ route('documents.update', $document->id) }}" enctype="multipart/form-data">
                                 @csrf
                                 @method('PUT')
 
@@ -30,7 +30,7 @@ $locale = session()->get('locale', config('app.locale', 'fr'));
                                         id="title_fr"
                                         name="title_fr"
                                         placeholder="{{ trans('lang.title_placeholder') }}"
-                                        value="{{ old('title_fr', $document->title['title_fr'] ?? '') }}"
+                                        value="{{ old('title_fr', $document->title['fr'] ?? '') }}"
                                         required>
                                     @error('title_fr')
                                     <div class="invalid-feedback">{{ $message }}</div>
@@ -44,7 +44,7 @@ $locale = session()->get('locale', config('app.locale', 'fr'));
                                         id="title_en"
                                         name="title_en"
                                         placeholder="{{ trans('lang.title_placeholder') }}"
-                                        value="{{ old('title_en', $document->title['title_en'] ?? '') }}">
+                                        value="{{ old('title_en', $document->title['en'] ?? '') }}">
                                     @error('title_en')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
