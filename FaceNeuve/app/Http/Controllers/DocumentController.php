@@ -33,7 +33,7 @@ class DocumentController extends Controller
         $request->validate([
             'title_fr' => 'required|max:255',
             'title_en' => 'nullable|max:255',
-            'file' => 'required|file|mimes:pdf,zip,doc,docx|max:10240', 
+            'file' => 'required|file|mimes:pdf,zip,doc,docx|max:10240',
         ], [], [
             'title_fr' => 'titre en français',
             'title_en' => 'titre en anglais',
@@ -58,7 +58,7 @@ class DocumentController extends Controller
             'file_path' => $filePath,
             'file_name' => $file->getClientOriginalName(),
             'file_type' => $file->getClientOriginalExtension(),
-            'student_id' => $student->student_id,
+            'student_id' => $student->id,
             'date' => now()->format('Y-m-d'),
         ]);
 
