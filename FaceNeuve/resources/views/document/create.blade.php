@@ -21,7 +21,7 @@
                                 <div class="mb-3">
                                     <label for="title_fr" class="form-label">@lang('lang.title_label_fr') *</label>
                                     <input type="text"
-                                        class="form-control @error('title_fr') is-invalid @enderror"
+                                        class="form-control"
                                         id="title_fr"
                                         name="title_fr"
                                         placeholder="{{ trans('lang.title_placeholder') }}"
@@ -35,7 +35,7 @@
                                 <div class="mb-3">
                                     <label for="title_en" class="form-label">@lang('lang.title_label_en')</label>
                                     <input type="text"
-                                        class="form-control @error('title_en') is-invalid @enderror"
+                                        class="form-control"
                                         id="title_en"
                                         name="title_en"
                                         placeholder="{{ trans('lang.title_placeholder') }}"
@@ -48,7 +48,7 @@
                                 <div class="mb-3">
                                     <label for="file" class="form-label">@lang('lang.file_label') *</label>
                                     <input type="file"
-                                        class="form-control @error('file') is-invalid @enderror"
+                                        class="form-control"
                                         id="file"
                                         name="file"
                                         accept=".pdf,.zip,.doc,.docx"
@@ -59,17 +59,15 @@
                                     @enderror
                                 </div>
 
-                                <div class="d-flex justify-content-between">
-                                    <a href="{{ route('documents.index') }}" class="btn btn-secondary">
-                                        @lang('lang.button_cancel')
-                                    </a>
-                                    <button type="submit" class="btn btn-primary">
-                                        @lang('lang.button_share')
-                                    </button>
-                                </div>
+                                <!-- Submit Button-->
+                                <div class="text-center mt-4"><button class="btn btn-primary btn-xl text-uppercase " id="submitButton" type="submit">@lang('lang.button_share')</button></div>
+
                             </form>
+
                         </div>
+
                     </div>
+                    <a href="{{ url()->previous() }}" class="btn btn-sm btn-primary mt-5 p-2">← @lang('lang.button_back')</a>
                 </div>
             </div>
         </div>
