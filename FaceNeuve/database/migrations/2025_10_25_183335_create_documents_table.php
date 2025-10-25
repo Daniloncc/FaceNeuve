@@ -13,15 +13,15 @@ return new class extends Migration
     {
         Schema::create('documents', function (Blueprint $table) {
             $table->id();
-            $table->json('title'); 
-            $table->string('file_path'); 
-            $table->string('file_name'); 
-            $table->string('file_type'); 
+            $table->json('title');
+            $table->string('file_path');
+            $table->string('file_name');
+            $table->string('file_type');
             $table->unsignedBigInteger('student_id');
             $table->date('date');
             $table->timestamps();
-            
-            $table->foreign('student_id')->references('student_id')->on('students')->onDelete('cascade');
+
+            $table->foreign('student_id')->references('id')->on('students')->onDelete('cascade');
         });
     }
 
