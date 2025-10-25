@@ -173,4 +173,17 @@ return [
     'titre_label_edit' => 'Modifier le forum',
     'forum_soustitre_edit' => 'Vous pouvez corriger dans les 2 langues',
 
+    // DOCUMENT
+    // Formulaire de partage de document
+    'share_document_title' => 'Partager un document',
+    'title_label_fr' => 'Titre (Français)',
+    'title_label_en' => 'Titre (Anglais)',
+    'title_placeholder' => 'Entrez le titre',
+    'file_label' => 'Fichier (PDF, ZIP, DOC)',
+    'file_help' => 'Taille maximale: 10MB',
+    'button_cancel' => 'Annuler',
+    'button_share' => 'Partager',
+    'required_field' => 'Champ obligatoire',
+    'titre_labe_document' => 'Partagez un document',
+    'forum_soustitre_document' => 'Ajouter un document qui peux etre util a vos collegues',
 ];

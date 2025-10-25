@@ -173,4 +173,15 @@ return [
     'titre_label_edit' => 'Edit Forum',
     'forum_soustitre_edit' => 'You can edit in both languages',
 
+    // DOCUMENT
+    // Document sharing form
+    'share_document_title' => 'Share a document',
+    'title_label_fr' => 'Title (French)',
+    'title_label_en' => 'Title (English)',
+    'title_placeholder' => 'Enter the title',
+    'file_label' => 'File (PDF, ZIP, DOC)',
+    'file_help' => 'Maximum size: 10MB',
+    'button_cancel' => 'Cancel',
+    'button_share' => 'Share',
+    'required_field' => 'Required field',
 ];

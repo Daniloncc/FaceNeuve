@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ForumController;
+use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\SetLocaleController;
@@ -43,6 +44,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/user/{user}', [UserController::class, 'profil'])->name('user.profil');
     Route::get('/edit/user/{user}', [UserController::class, 'edit'])->name('user.edit');
 });
+
 Route::get('/registration', [UserController::class, 'create'])->name('user.create');
 Route::post('/registration', [UserController::class, 'store'])->name('user.store');
 
@@ -63,3 +65,8 @@ Route::middleware('auth')->group(function () {
     Route::delete("/index/forum", [ForumController::class, 'destroy'])->name('forum.destroy');
 });
 Route::get("/index/forum", [ForumController::class, 'index'])->name('forum.index');
+
+// Document
+Route::middleware('auth')->group(function () {
+    Route::resource('documents', DocumentController::class);
+});

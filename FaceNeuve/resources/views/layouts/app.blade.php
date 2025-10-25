@@ -86,7 +86,7 @@
                             <hr>
                             <li><a class="dropdown-item" href="#">Materiel</a></li>
                             @auth
-                            <li><a class="dropdown-item" href="#">Ajouter materiel</a></li>
+                            <li><a class="dropdown-item" href="{{ route('documents.create') }}">Ajouter materiel</a></li>
                             @endauth
                         </ul>
                     </div>
