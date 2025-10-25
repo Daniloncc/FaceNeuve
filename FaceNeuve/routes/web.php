@@ -68,5 +68,6 @@ Route::get("/index/forum", [ForumController::class, 'index'])->name('forum.index
 
 // Document
 Route::middleware('auth')->group(function () {
+    Route::get('documents/{document}/download', [DocumentController::class, 'download'])->name('documents.download');
     Route::resource('documents', DocumentController::class);
 });

@@ -159,4 +159,21 @@ class DocumentController extends Controller
 
         return redirect()->route('documents.index')->withSuccess('Document supprimé avec succès!');
     }
+
+    /**
+     * Télécharger un document
+     */
+    public function download(Document $document)
+    {
+        // Vérifier si le fichier existe dans le stockage
+        if (!Storage::disk('public')->exists($document->file_path)) {
+            abort(404, 'Fichier introuvable');
+        }
+
+        // Télécharger le fichier avec son nom original
+        return Storage::disk('public')->download(
+            $document->file_path,
+            $document->file_name
+        );
+    }
 }

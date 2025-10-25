@@ -56,7 +56,7 @@ $locale = session()->get('locale', config('app.locale', 'fr'));
 
                                             <td class="">
                                                 @if(Auth::user()->email !== $document->student->email)
-                                                <a href=""
+                                                <a href="{{ route('documents.download', $document->id) }}"
                                                     class="btn btn-sm btn-success">
                                                     <i class="fas fa-download"></i> @lang('lang.button_download')
                                                 </a>
