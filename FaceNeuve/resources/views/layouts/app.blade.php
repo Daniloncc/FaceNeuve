@@ -84,7 +84,7 @@
                             <li><a class="dropdown-item" href="{{ route('forum.create') }}">Ajouter message</a></li>
                             @endauth
                             <hr>
-                            <li><a class="dropdown-item" href="#">Materiel</a></li>
+                            <li><a class="dropdown-item" href="{{ route('documents.index') }}">Materiel</a></li>
                             @auth
                             <li><a class="dropdown-item" href="{{ route('documents.create') }}">Ajouter materiel</a></li>
                             @endauth

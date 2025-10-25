@@ -186,4 +186,16 @@ return [
     'required_field' => 'Champ obligatoire',
     'titre_labe_document' => 'Partagez un document',
     'forum_soustitre_document' => 'Ajouter un document qui peux etre util a vos collegues',
+
+    // Page répertoire de documents
+    'document_directory_title' => 'Répertoire de documents',
+    'share_document_button' => 'Partager un document',
+    'no_documents_available' => 'Aucun document disponible.',
+    'table_title' => 'Titre',
+    'table_type' => 'Type',
+    'table_shared_by' => 'Partagé par',
+    'table_date' => 'Date',
+    'table_actions' => 'Actions',
+    'button_download' => 'Télécharger',
+    'confirm_delete_document' => 'Êtes-vous sûr de vouloir supprimer ce document?',
 ];

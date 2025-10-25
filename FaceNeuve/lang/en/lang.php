@@ -184,4 +184,16 @@ return [
     'button_cancel' => 'Cancel',
     'button_share' => 'Share',
     'required_field' => 'Required field',
+
+    // Document directory page
+    'document_directory_title' => 'Document Directory',
+    'share_document_button' => 'Share a document',
+    'no_documents_available' => 'No documents available.',
+    'table_title' => 'Title',
+    'table_type' => 'Type',
+    'table_shared_by' => 'Shared by',
+    'table_date' => 'Date',
+    'table_actions' => 'Actions',
+    'button_download' => 'Download',
+    'confirm_delete_document' => 'Are you sure you want to delete this document?',
 ];
