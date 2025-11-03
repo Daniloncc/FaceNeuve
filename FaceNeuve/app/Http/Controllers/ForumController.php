@@ -13,7 +13,7 @@ class ForumController extends Controller
 {
     public function index()
     {
-        $forums = Forum::select()->orderby('date', 'DESC')->paginate(5);
+        $forums = Forum::select()->orderby('date', 'DESC')->paginate(3);
         return view('forum.index', ['forums' => $forums]);
     }
 
@@ -112,11 +112,11 @@ class ForumController extends Controller
     {
         $forum = Forum::select()->where('id', $request->id)->first();
         // Vérifier que l'utilisateur est le propriétaire
-        $student = Student::where('email', Auth::user()->email)->first();
-        if ($forum->student_id !== $student->id) {
-            return back();
+        $student = Student::where('id', $forum->student_id)->first();
+        if ($forum->student_id == $student->id || Auth::id() === 9) {
+            $forum->delete();
+            return redirect()->route('forum.index');
         }
-        $forum->delete();
-        return redirect()->route('forum.index');
+        return back();
     }
 }

@@ -61,11 +61,13 @@ class UserController extends Controller
     public function profil(User $user)
     {
         $userId = Auth::id();
-        if ($userId === 9) {
+        $user = User::where('id', $userId)->first();
+        $student = Student::where('email', Auth::user()->email)->first();
+        if ($user->email === $student->email || $userId === 9) {
             $student = Student::where('email', $user->email)->first();
             return view('student.show', ['student' => $student]);
         }
-        return redirect(route('login'));
+        return redirect(route('logout'));
     }
 
     public function edit(User $user)
@@ -75,6 +77,6 @@ class UserController extends Controller
             $student = Student::where('email', $user->email)->first();
             return view('student.show', ['student' => $student]);
         }
-        return redirect(route('login'));
+        return redirect(route('logout'));
     }
 }

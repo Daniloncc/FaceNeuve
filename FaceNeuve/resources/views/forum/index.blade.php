@@ -29,16 +29,20 @@ $locale = session()->get('locale', config('app.locale', 'fr'));
                 </div>
 
                 @auth
-                @if($forum->student->email === auth()->user()->email)
+                @if($forum->student->email === auth()->user()->email || auth()->id() === 9)
                 <div class="card-footer text-bg-light">
                     <div class="d-flex justify-content-end gap-3">
+                    @if($forum->student->email === auth()->user()->email)
                         <a href="{{ route('forum.edit', $forum->id) }}" class="btn btn-sm btn-primary">
                             <i class="bi bi-pen"></i> @lang('lang.button_edit')
                         </a>
+                        @endif
                         <!-- Button trigger modal -->
+                        @if($forum->student->email === auth()->user()->email || auth()->id() === 9)
                         <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" data-modal>
                             <i class="bi bi-trash"></i> @lang('lang.button_delete')
                         </button>
+                        @endif
                     </div>
                 </div>
                 @endif

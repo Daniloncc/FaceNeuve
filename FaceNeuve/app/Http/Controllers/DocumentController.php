@@ -12,7 +12,7 @@ class DocumentController extends Controller
 {
     public function index()
     {
-        $documents = Document::with('student')->orderBy('date', 'desc')->paginate(5);
+        $documents = Document::with('student')->orderBy('date', 'desc')->paginate(3);
         return view('document.index', ['documents' => $documents]);
     }
 
@@ -118,19 +118,19 @@ class DocumentController extends Controller
     public function destroy(Document $document)
     {
         // Vérifier que l'utilisateur est le propriétaire
-        $student = Student::where('email', Auth::user()->email)->first();
+        $student = Student::where('id', $document->student_id)->first();
 
-        if ($document->student_id !== $student->id) {
-            return back();
+        if ($document->student_id == $student->id || Auth::id() === 9) {
+            // Supprimer le fichier du stockage
+            Storage::disk('public')->delete($document->file_path);
+
+            // Supprimer l'enregistrement
+            $document->delete();
+
+            return redirect()->route('documents.index')->withSuccess('Document supprimé avec succès!');
         }
 
-        // Supprimer le fichier du stockage
-        Storage::disk('public')->delete($document->file_path);
-
-        // Supprimer l'enregistrement
-        $document->delete();
-
-        return redirect()->route('documents.index')->withSuccess('Document supprimé avec succès!');
+        return back();
     }
 
     public function download(Document $document)

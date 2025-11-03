@@ -61,11 +61,13 @@ $locale = session()->get('locale', config('app.locale', 'fr'));
                                                     <i class="fas fa-download"></i> @lang('lang.button_download')
                                                 </a>
                                                 @endif
+                                                @if(Auth::user()->email === $document->student->email || auth()->id() === 9)
                                                 @if(Auth::user()->email === $document->student->email)
                                                 <a href="{{ route('documents.edit', $document->id) }}"
                                                     class="btn btn-sm btn-primary">
                                                     <i class="fas fa-edit"></i> @lang('lang.button_edit')
                                                 </a>
+                                                @endif
                                                 <!-- Button trigger modal -->
                                                 <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" data-modal>
                                                     <i class="bi bi-trash"></i> @lang('lang.button_delete')
